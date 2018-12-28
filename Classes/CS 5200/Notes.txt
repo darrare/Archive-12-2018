@@ -1,0 +1,2 @@
+1/23
+Dennard Scaling: An X size chip would always use the same amount of power regardless of feature size.

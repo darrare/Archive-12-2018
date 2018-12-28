@@ -1,0 +1,174 @@
+#import sys
+#sys.path.append('f:/programmingtools/python/lib/site-packages')
+import cv2
+import numpy as np
+import copy
+import math
+from GestureDetection import Update
+from matplotlib import pyplot as plt
+
+def Nothing(thr):
+    return()
+
+def calculateFingers(res,drawing):  # -> finished bool, cnt: finger count
+    #  convexity defect
+    hull = cv2.convexHull(res, returnPoints=False)
+    if len(hull) > 3:
+        defects = cv2.convexityDefects(res, hull)
+        if type(defects) != type(None):  # avoid crashing.   (BUG not found)
+
+            cnt = 0
+            positions = list()
+            for i in range(defects.shape[0]):  # calculate the angle
+                s, e, f, d = defects[i][0]
+                start = tuple(res[s][0])
+                end = tuple(res[e][0])
+                far = tuple(res[f][0])
+                a = math.sqrt((end[0] - start[0]) ** 2 + (end[1] - start[1]) ** 2)
+                b = math.sqrt((far[0] - start[0]) ** 2 + (far[1] - start[1]) ** 2)
+                c = math.sqrt((end[0] - far[0]) ** 2 + (end[1] - far[1]) ** 2)
+                angle = math.acos((b ** 2 + c ** 2 - a ** 2) / (2 * b * c))  # cosine theorem
+                
+                if angle <= math.pi / 2:  # angle less than 90 degree, treat as fingers
+                    cnt += 1
+                    cv2.circle(drawing, far, 8, [211, 84, 0], -1)
+                    positions.append(far)
+
+            from GestureDetection import GetAverageFingerPosition
+            avgPosition = GetAverageFingerPosition(positions, cnt)
+            if cnt > 0:
+                cv2.circle(drawing, (int(avgPosition[0]), int(avgPosition[1])), 8, [255, 255, 255], -1)
+
+            return True, cnt, positions
+    return False, 0, list()
+
+
+# parameters
+cap_region_x_begin=0.5  # start point/total width
+cap_region_y_end=0.8  # start point/total width
+ORI = 60 #  BINARY threshold
+BLUR = 20  # GaussianBlur parameter
+
+histogramMinVal = 0
+histogramMaxVal = 0
+multiplyVal = 0
+
+cnt = 0
+positions = list()
+drawing = None
+
+camera = cv2.VideoCapture(0)
+camera.set(10,200)
+cv2.namedWindow('Settings')
+cv2.createTrackbar('ORI', 'Settings', ORI, 100, Nothing)
+cv2.createTrackbar('BLUR', 'Settings', BLUR, 100, Nothing)
+_, bgModel = camera.read()
+bgModel = cv2.flip(bgModel, 1)  # flip the frame horizontally
+bgGray = cv2.cvtColor(bgModel, cv2.COLOR_BGR2GRAY)
+
+hist = cv2.calcHist([bgGray],[0],None,[256],[0,256])
+for i in range(255):
+    if hist[i] > 3:
+        histogramMinVal = i
+        break
+
+for i in range(255, 0, -1):
+    if hist[i] > 3:
+        histogramMaxVal = i
+        break
+
+
+cv2.imshow('before', bgGray)
+
+bgGray = bgGray - histogramMinVal
+bgGray[bgGray < 0] = 0
+bgGray[bgGray > 255] = 255
+
+#histogramMaxVal -= histogramMinVal #concludes the new maxVal based on the fact that we are removing the min val from every element
+#multiplyVal = 255.00 / histogramMaxVal
+
+
+cv2.imshow('bgmodel', bgGray)
+
+
+
+while camera.isOpened():
+    BLUR = cv2.getTrackbarPos('BLUR', 'Settings')
+    if BLUR % 2 == 0:
+        BLUR = BLUR + 1
+    ORI = cv2.getTrackbarPos('ORI', 'Settings')
+    ret, frame = camera.read()
+    frame = cv2.flip(frame, 1)  # flip the frame horizontally
+    #cv2.imshow('original', frame) Showing under update
+
+    
+
+
+    
+    #plt.hist(frame.ravel(),256,[0,256])
+    #plt.show()
+
+
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    gray = gray - histogramMinVal
+    gray[gray < 0] = 0
+
+    #img = cv2.bitwise_and(frame, bgModel) #weird ghosty hand
+    img = cv2.subtract(gray, bgGray)
+    img[img < 25] = 0
+    img[img > 25] = 255
+    
+    #cv2.imshow('altered', img)
+
+    erosion = cv2.erode(img, np.ones((3, 3), np.uint8), iterations = 3)
+    #cv2.imshow('erode', erosion)
+
+
+    # convert the image into binary image
+
+    
+    blur = cv2.GaussianBlur(erosion, (BLUR, BLUR), 0)
+    #cv2.imshow('blur', blur)
+
+    ret, thresh = cv2.threshold(blur, ORI, 255, cv2.THRESH_BINARY)
+    #cv2.imshow('ori', thresh)
+
+
+
+    # get the coutours
+    thresh1 = copy.deepcopy(thresh)
+    _, contours, hierarchy = cv2.findContours(thresh1, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    length = len(contours)
+    maxArea = -1
+
+    if length > 0:
+        for i in range(length):  # find the biggest contour (according to area)
+            temp = contours[i]
+            area = cv2.contourArea(temp)
+            if area > maxArea:
+                maxArea = area
+                ci = i
+
+        res = contours[ci]
+        hull = cv2.convexHull(res)
+        drawing = np.zeros(img.shape, np.uint8)
+        cv2.drawContours(drawing, [res], 0, (0, 255, 0), 2)
+        cv2.drawContours(drawing, [hull], 0, (0, 0, 255), 3)
+
+        isFinishCal,cnt,positions = calculateFingers(res,drawing)
+        
+
+        cv2.imshow('output', drawing)
+        
+    Update(cnt, positions, frame)
+
+    
+    # Keyboard OP
+    k = cv2.waitKey(10)
+    if k == 27:  # press ESC to exit
+        cv2.destroyAllWindows()
+        break
+
+
+

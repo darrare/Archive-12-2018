@@ -1,0 +1,60 @@
+\documentclass[11pt,twoside]{IEEEtran}
+
+%opening
+\title{Facing Scalability Issues in Requirements Prioritization with Machine Learning Techniques}
+\author{Paper by Paolo Avesani, Cinzia Bazzanella, Anna Perini, Angelo Susi\\Reviewed by Ryan Darras}
+
+\begin{document}
+
+\maketitle
+
+\section{Suggestion for acceptance}
+Strongly accept. Solid results and easy to understand.
+
+\section{Summary}
+Elicitation effort is O(n$^2$) based on the number of requirements. This effort can be reduced by using machine learning techniques that automatically determine human preferences.
+
+Claims that their approach outperforms the analytic hierarchy process with respect to the trade-off between expert elicitation effort and the requirements prioritization accuracy.
+
+Goal: Use the machine learning technique to reduce the amount of pairs gained from the analytical hierarchy processes with limited effort. Compare this strategy against current state-of-the-art solutions to the AHP scalability problem
+
+Their strategy uses three steps with minor stakeholder input to determine a system in which machine learning can predict the accurate rankings.
+Pair sampling: Autonomous
+Automatic procedure which samples pairs of requirements on the basis of a selection policy.
+Selection policy will take into account currently available rankings. 
+Preference elicitation: Stakeholder input
+The stakeholders compare pairs of requirements with the option of equality.
+Ranking Learning: Autonomous
+Uses stakeholder input to determine comparison results for unknown pairs.
+Considers other criteria such as cost of the requirement, estimated value, etc.
+
+
+\section{Positive points}
+
+Very well done explaining the different compared strategies. I felt like I knew exactly what the previous strategies were, and how the authors built upon them.
+
+The math was spelled out very well. Well enough such that I could simply skim over the heavy math parts and understand what was going on. I guess they kind of built the math into the sentence instead of doing something along the lines of, "X = this, Y = that, Z = blah and this equation makes the magic happen: X/Y+Z*X/A?G"
+
+
+\section{Negative points}
+
+Figures 3, 4, and 5 have a description that sort of doesn't make sense. \% disagreement is fine but is it comparing the disagreement between machine and human?
+
+\section{Potential future work}
+
+Machine learning is an interesting area... Interesting in such a way that just about anything can be altered which has the possibility of improving the system. Given the correct data, it might be possible to create a machine learning system of requirements priority ranking that only needs the user to manually assess a small fraction of the overall pairs. I'd love to see this same problem with many different researchers take.
+
+\section{Random notes}
+Requirements prioritization plays a key role when we need to plan for system releases and decide what to implement per release with budget, time constraints, and customer expectations in mind.
+
+The absolute order of each feature does not matter as much as grouping them per release.
+
+First principle methods rank features based on their priority independent of the overall set of requirements. This can cause partial releases.
+
+Ex-post: elicitation of prioritization is performed in parallel with the requirements analysis. Using pairwise comparisons, you can define which requirement has higher priority and why it is preferred. IE: the prioritization is not explicitly encoded, but acquired by examples.
+
+Analytical Hierarchy process: an assessment of the relative priority between a group of requirements that consider all possible pairs of requirements. This becomes impractical as the number of requirements increase. Current solutions to fix this scaling issue implement heuristics for reducing the amount of pairs.
+
+
+
+\end{document}

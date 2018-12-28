@@ -1,0 +1,36 @@
+.data
+Limit:			#sum from 1 to this number
+.word	100
+Success:		#Happy message string
+.asciiz	"Congratulations, your code appears to work!\r\n"
+Nonsuccess:		#Other message string
+.asciiz "You still have work to do...\r\n"
+
+.text			#running program starts here
+lw	$a0, Limit	#provide the argument to the subroutine call
+
+jal GaussianSum		#calculate the sum based on Gauss' formula: n(n+1)/2
+addi	$s0, $v0, 0	#save the result for later
+
+jal	Sum		#Execute student's code
+
+beq	$v0, $s0, Good	#compare values, go to Good if the same
+la	$a0, Nonsuccess #load the address of the unsuccessful message
+j AlmostDone		#jump to place where it's printed out
+Good:
+la	$a0, Success	#load the success message
+AlmostDone:
+addi	$v0, $0, 4	#tell the OS to print the string whose address is in $a0
+syscall			#kernel call
+
+addi	$v0, $0, 10	#tell the OS we want to end the program
+syscall			#call the OS
+
+GaussianSum:
+addi	$v0, $a0, 1	#add 1 to the calling argument and load into return register
+mul	$v0, $a0, $v0	#multiply the n+1 in $v0 times the n in $a0
+srl	$v0, $v0, 1	#divide $v0 by 2 by shifting right 1 bit
+jr $ra
+
+Sum:
+#your code goes below here.  Do not change anything above this point when submitting.

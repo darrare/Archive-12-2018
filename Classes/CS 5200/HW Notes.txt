@@ -1,0 +1,13 @@
+HW #4
+Class A  B   C
+CPI   1 2.5  4
+inst  40 10  30
+prop  1/2 1/8 3/8
+1*1/2 + 2.5*1/8 + 4*3/8 = 2.3125 average cpi
+
+#5
+Lower is faster
+Factor = big#/small#
+Percentage = round to nearest 10th percent.
+
+

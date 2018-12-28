@@ -1,0 +1,28 @@
+Computer Revolution
+	Began in the 1940's and now accounts for 10% of GNP.
+	Made novel applications feasible, such as: computers in automobiles, cell phones, human genome project, world wide web, search engines.
+
+Moore's Law - Density of transitors doubly ever 18-24 months.
+
+Classes of computers
+	Desktop computers - General purpose, variety of software. Subject to cost/performance tradeoff - Single user
+	Server computers - Network based, high capacity, performance, reliability. Range from small servers to building sized. - Multiple users
+	Embedded computers - Hidden as components of systems, stringent power/perforamnce/cost constraints. Updates personal mobile devices, amd warehouse computing systems.
+
+
+Understanding perforamnce
+	Algorithm - Determines number of operations executed.
+	Programming language, compiler, architecture - Determine number of machine instructions executed per operation
+	Processor and memory system - Determine how fast instructions are executed.
+	I/O system (including OS) - Determines how fast I/O operations are executed.
+
+8 Great Architecture Ideas
+	Design for Moore's Law
+	Use abstractions to simplify design
+	Make the common case fast
+	Parallelism
+	Pipelining
+	Prediction
+	Memory Hierarchy
+	Reliability via Redundancy
+
