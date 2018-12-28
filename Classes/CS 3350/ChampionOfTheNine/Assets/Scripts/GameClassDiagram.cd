@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AIRangerScript">
+    <Position X="5.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\AIRangerScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AIScript">
+    <Position X="7.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAIAAAEAAAAIAAQAAgAAAAABAAJEA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\AIScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterControllerScript">
+    <Position X="8.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACIAAAAAAAAAQAAAAAAAAAAAAAAQAAgAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\CharacterControllerScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExpArrowScript">
+    <Position X="18.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\ExpArrowScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjScript">
+    <Position X="23.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAQAYQAAAAAAAAAAAAAAQAAAAEAAAAAAABA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\ProjScript.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="lifeTimer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AxeScript">
+    <Position X="21" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAIAAAAAAAAEAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\AxeScript.cs</FileName>
+      <NewMemberFileName>Assets\Scripts\Projectiles\ArrowScript.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DamagableObjectScript">
+    <Position X="2.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACACIAAAAIQAAAAAAAAAAAAAAEAAgAAACAAAQAAg=</HashCode>
+      <FileName>Assets\Scripts\DamagableObjectScript.cs</FileName>
+      <NewMemberFileName>Assets\Scripts\CharacterScript.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Constants">
+    <Position X="38.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wJpuxgzIYoPOr5a4B4v0msbSt8nZgQfJ6Wg613/Ec9Y=</HashCode>
+      <FileName>Assets\Scripts\Utilities\Constants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DamagingObjectScript">
+    <Position X="25.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABCAAAAAgwBAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\DamagingObjectScript.cs</FileName>
+      <NewMemberFileName>Assets\Scripts\DamagingObjects\ExplosionScript.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="hit" />
+      <Field Name="damageHandler" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PierceArrowScript">
+    <Position X="23.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\PierceArrowScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerScript">
+    <Position X="12" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAAAAAAAAQAAAAAAAQAAAAAARAAgAAAAAAAAEkA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\PlayerScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RangerScript">
+    <Position X="17.5" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAUGAAAgYIAQKABEAAAAAAEIAAAABAAIBAAAAICAA=</HashCode>
+      <FileName>Assets\Scripts\Characters\RangerScript.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pierceShootWindow" />
+      <Field Name="pierceShootCD" />
+      <Field Name="boostTimer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Timer">
+    <Position X="18" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAEAAAADAAAAAAAAAAQAAAAAgBAAAAAQAAAAEAAAg=</HashCode>
+      <FileName>Assets\Scripts\Utilities\Timer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="timerFinishedEvent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TimerFinishedEvent">
+    <Position X="18" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAABABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\TimerFinishedEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MageScript">
+    <Position X="13" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAQAAAAIBQAARAJgAAAAAoQAAABAQADAAgAACAA=</HashCode>
+      <FileName>Assets\Scripts\Characters\MageScript.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="lightningTimer" />
+      <Field Name="drainTimer" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="drainTargets" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WarriorScript">
+    <Position X="15.25" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAgAAEAAQgAIASAAZGAkAAAQAIAABABAggDgAwAAuAA=</HashCode>
+      <FileName>Assets\Scripts\Characters\WarriorScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IceSpellScript">
+    <Position X="25.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\IceSpellScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LightningSpellScript">
+    <Position X="27.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\LightningSpellScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeteorSpellScript">
+    <Position X="30" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAEAABAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\MeteorSpellScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AIMageScript">
+    <Position X="7.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\AIMageScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AIWarriorScript">
+    <Position X="9.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\AIWarriorScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterScript">
+    <Position X="15.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>xCAAAAAAloAJCRxQBA4UEhEEgIBQEqBgABpBAAAAiAA=</HashCode>
+      <FileName>Assets\Scripts\Characters\CharacterScript.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GCDTimer" />
+      <Property Name="SecondaryCDTimer" />
+      <Property Name="PowerCDTimer" />
+      <Property Name="SpecialCDTimer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CastleScript">
+    <Position X="2.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAACAAAAAAAAAAAAAAAAAgAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\CastleScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Utilities">
+    <Position X="37" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAgACAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\Utilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="9.5" Y="19.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="GameManager.Updater" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\GameManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQgMIgIAAAAAAAEBggAFCACQAhkACCARAAAgAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\GameManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Saves" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Savegame">
+    <Position X="6.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAEAAAABAAAAAEAAEAAAABAAAIAAAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\Savegame.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PlayerType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="KingdomStatuses" />
+      <Property Name="KingdomLocations" />
+      <Property Name="Inputs" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Serializer">
+    <Position X="35.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAACBAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\Serializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkyState">
+    <Position X="25.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAcAAgIHAAIAAQAAAAUAIAIQACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\SkyState.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NextState" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KingdomButtonScript">
+    <Position X="0.5" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\Menus\KingdomButtonScript.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="kingdom" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KingdomStatus">
+    <Position X="3.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\KingdomStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorldScript">
+    <Position X="21" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASKAhEAgChCACAAAAAYUAGigAHAAQQBQAABgBEZAgA=</HashCode>
+      <FileName>Assets\Scripts\WorldScript.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="skyTimer" />
+      <Field Name="currSkyState" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="skyStates" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tutorial">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Tutorial.Stage" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Tutorial.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAhAABAACAIAAAAAAAAAAAAEAAACCAAAAAQAAgECAA=</HashCode>
+      <FileName>Assets\Scripts\Tutorial\Tutorial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TutorialRanger">
+    <Position X="4.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIBAAAECAAAAAAAAAAEAAAAAAAAABAABAAAAgUCgA=</HashCode>
+      <FileName>Assets\Scripts\Tutorial\TutorialRanger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseableObjectScript">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAAAAAAQAAAAIAAAAAAAAAQACACQAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\PauseableObjectScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySpawner">
+    <Position X="14.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAAAAAAAACAAAAAAAAAQAIAAAEgAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\EnemySpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwordScript">
+    <Position X="32.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAAQAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\SwordScript.cs</FileName>
+      <NewMemberFileName>Assets\Scripts\DamagingObjects\ExplosionScript.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExplosionScript">
+    <Position X="34.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\ExplosionScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArrowScript">
+    <Position X="16.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\ArrowScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputButton">
+    <Position X="9.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQAAAAAQAQAAEAEQAAAAAAAAAAAAAAAgkAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\InputButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterCreationScript">
+    <Position X="3.5" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQCAQAoQCAEAAKABMAAAAAgKARAACAAQAAAAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menus\CharacterCreationScript.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="selectedType" />
+      <Field Name="currentRemap" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="HitType">
+    <Position X="28.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAEAEBA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\HitType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SkyStateType">
+    <Position X="24" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAgACAAAAQAAAEAAAAAAAQAACAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\SkyStateType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="KingdomName">
+    <Position X="3.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\KingdomName.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="InputType">
+    <Position X="0.5" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAQAAABAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\InputType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CharacterType">
+    <Position X="6.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\Characters\CharacterType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="EnergyChangedHandler" Collapsed="true">
+    <Position X="37" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\CharacterControllerScript.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TimerFinishedEventHandler" Collapsed="true">
+    <Position X="35.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\TimerFinishedEvent.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="DamageHandler" Collapsed="true">
+    <Position X="22.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamagingObjects\DamagingObjectScript.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

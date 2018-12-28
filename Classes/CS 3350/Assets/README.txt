@@ -1,0 +1,1 @@
+This folder is for assets as they are created (but perhaps not yet added to the project).
