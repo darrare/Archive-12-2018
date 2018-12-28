@@ -14,6 +14,9 @@ Assets/AssetStoreTools*
 # Visual Studio cache directory
 .vs/
 
+# Zipped files
+*.zip
+
 # Gradle cache directory
 .gradle/
 
