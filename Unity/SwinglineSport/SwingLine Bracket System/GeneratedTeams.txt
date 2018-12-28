@@ -1,0 +1,5 @@
+People,Guy,Girl,Thing
+Gods,Zeus,Poseidon,Ares
+Sports,Baseball,Football,Basketball
+Animals,Dog,Cat,Bird
+Computer things,Monitor,Keyboard,Mouse

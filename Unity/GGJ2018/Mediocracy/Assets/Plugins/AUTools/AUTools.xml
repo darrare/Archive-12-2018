@@ -1,0 +1,1039 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AUTools</name>
+    </assembly>
+    <members>
+        <member name="T:AUTools.Collections.Grid2D`1">
+            <summary>Class that holds an expandable 2D grid.</summary>
+            <typeparam name="T">the type of data to hold in the grid.</typeparam>
+        </member>
+        <member name="P:AUTools.Collections.Grid2D`1.Count">
+            <summary>Gets the number of items in the grid.</summary>
+            <value>The grid count.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid2D`1.MinX">
+            <summary>Gets the smallest X value in the grid.</summary>
+            <value>The grid's smallest x coordinate.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid2D`1.MaxX">
+            <summary>Gets the largest X value in the grid.</summary>
+            <value>The grid's largest x coordinate.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid2D`1.MinY">
+            <summary>Gets the smallest Y value in the grid.</summary>
+            <value>The grid's smallest coordinate.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid2D`1.MaxY">
+            <summary>Gets the largest Y value in the grid.</summary>
+            <value>The grid's largest y coordinate.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid2D`1.Item(AUTools.Coordinates2)">
+            <summary>Grid indexer.</summary>
+            <param name="pos">the position.</param>
+            <value>the value of the cell.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid2D`1.Item(System.Int32,System.Int32)">
+            <summary>Grid indexer.</summary>
+            <param name="x">the row.</param>
+            <param name="y">the column.</param>
+            <value>the value of the cell, default value if none.</value>
+        </member>
+        <member name="M:AUTools.Collections.Grid2D`1.RemoveValue(System.Int32,System.Int32)">
+            <summary>Removes the given cell information from the grid Eqivalent to (grid[x, y] = null) for nullable types.</summary>
+            <param name="x">the x position.</param>
+            <param name="y">the y position.</param>
+            <returns>true if cell had a value in it, false otherwise.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid2D`1.RemoveValue(AUTools.Coordinates2)">
+            <summary>Removes the given cell information from the grid Eqivalent to (grid[pos] = null) for nullable types.</summary>
+            <param name="pos">the position.</param>
+            <returns>true if cell had a value in it, false otherwise.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid2D`1.ContainsValue(System.Int32,System.Int32)">
+            <summary>Checks whether or not the given cell has a value in it Equivalent to (grid[x, y] != null) for nullable types.</summary>
+            <param name="x">the row.</param>
+            <param name="y">the column.</param>
+            <returns>true if cell has a value in it, false otherwise.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid2D`1.ContainsValue(AUTools.Coordinates2)">
+            <summary>Checks whether or not the given cell has a value in it Equivalent to (grid[pos] != null) for nullable types.</summary>
+            <param name="pos">the position.</param>
+            <returns>true if cell has a value in it, false otherwise.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid2D`1.Clear">
+            <summary>Clears the grid.</summary>
+        </member>
+        <member name="M:AUTools.Collections.Grid2D`1.GetEnumerator">
+            <summary>Returns an enumerator that iterates through the collection.</summary>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid2D`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Returns an enumerator that iterates through a collection.</summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid2D`1.ToString">
+            <summary>Returns a string that represents the current object.</summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid2D`1.AddValue(System.Int32,System.Int32,`0)">
+            <summary>
+            Adds the given value into the grid at the given position
+            </summary>
+            <param name="x">the x position</param>
+            <param name="y">the y position</param>
+            <param name="value">the value</param>
+        </member>
+        <member name="T:AUTools.Collections.Grid3D`1">
+            <summary>Class that holds an expandable 3D grid.</summary>
+            <typeparam name="T">the type of data to hold in the grid.</typeparam>
+        </member>
+        <member name="P:AUTools.Collections.Grid3D`1.Count">
+            <summary>Gets the number of items in the grid.</summary>
+            <value>The grid count.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid3D`1.MinX">
+            <summary>Gets the smallest X value in the grid.</summary>
+            <value>The grid's smallest x coordinate.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid3D`1.MaxX">
+            <summary>Gets the largest X value in the grid.</summary>
+            <value>The grid's largest x coordinate.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid3D`1.MinY">
+            <summary>Gets the smallest Y value in the grid.</summary>
+            <value>The grid's smallest y coordinate.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid3D`1.MaxY">
+            <summary>Gets the largest Y value in the grid.</summary>
+            <value>The grid's largest y coordinate.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid3D`1.MinZ">
+            <summary>Gets the smallest Z value in the grid.</summary>
+            <value>The minimum z coordinate.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid3D`1.MaxZ">
+            <summary>Gets the largest Z value in the grid.</summary>
+            <value>The maximum z coordinate.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid3D`1.Item(AUTools.Coordinates3)">
+            <summary>Grid indexer.</summary>
+            <param name="pos">the position.</param>
+            <value>the value of the cell.</value>
+        </member>
+        <member name="P:AUTools.Collections.Grid3D`1.Item(System.Int32,System.Int32,System.Int32)">
+            <summary>Grid indexer.</summary>
+            <param name="x">the row.</param>
+            <param name="y">the column.</param>
+            <param name="z">the z.</param>
+            <value>the value of the cell.</value>
+        </member>
+        <member name="M:AUTools.Collections.Grid3D`1.RemoveValue(System.Int32,System.Int32,System.Int32)">
+            <summary>Removes the given cell information from the grid Eqivalent to (grid[x, y, z] = null) for nullable types.</summary>
+            <param name="x">the x position.</param>
+            <param name="y">the y position.</param>
+            <param name="z">the z position.</param>
+            <returns><c>true</c> if it succeeds, <c>false</c> if it fails.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid3D`1.RemoveValue(AUTools.Coordinates3)">
+            <summary>Removes the given cell information from the grid Eqivalent to (grid[pos] = null) for nullable types.</summary>
+            <param name="pos">the position.</param>
+            <returns>true if cell had a value in it, false otherwise.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid3D`1.ContainsValue(System.Int32,System.Int32,System.Int32)">
+            <summary>Checks whether or not the given cell has a value in it Equivalent to (grid[x, y, z] != null) for nullable types.</summary>
+            <param name="x">the row.</param>
+            <param name="y">the column.</param>
+            <param name="z">the z.</param>
+            <returns>true if cell has a value in it, false otherwise.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid3D`1.ContainsValue(AUTools.Coordinates3)">
+            <summary>Checks whether or not the given cell has a value in it Equivalent to (grid[pos] != null) for nullable types.</summary>
+            <param name="pos">the position.</param>
+            <returns>true if cell has a value in it, false otherwise.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid3D`1.Clear">
+            <summary>Clears the grid.</summary>
+        </member>
+        <member name="M:AUTools.Collections.Grid3D`1.GetEnumerator">
+            <summary>Returns an enumerator that iterates through the collection.</summary>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid3D`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Returns an enumerator that iterates through a collection.</summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid3D`1.ToString">
+            <summary>Returns a string that represents the current object.</summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="M:AUTools.Collections.Grid3D`1.AddValue(System.Int32,System.Int32,System.Int32,`0)">
+            <summary>
+            Adds the given value into the grid at the given position
+            </summary>
+            <param name="x">the x position</param>
+            <param name="y">the y position</param>
+            <param name="z">the z position</param>
+            <param name="value">the value</param>
+        </member>
+        <member name="T:AUTools.Collections.PriorityQueue`2">
+            <summary>A loosely-sorted collection that stores items with associated priorities.</summary>
+            <typeparam name="TPriority">the priority type.</typeparam>
+            <typeparam name="TValue">the value type.</typeparam>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.#ctor">
+            <summary>Creates a new <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</summary>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.#ctor(System.Int32)">
+            <summary>Creates a new <see cref="T:AUTools.Collections.PriorityQueue`2"/> with the given initial capacity.</summary>
+            <param name="capacity">The number of elements that the new <see cref="T:AUTools.Collections.PriorityQueue`2"/> can initially store.</param>
+        </member>
+        <member name="P:AUTools.Collections.PriorityQueue`2.Count">
+            <summary>Gets the number of elements contained in the <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</summary>
+            <value>The number of elements contained in the <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</value>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.Enqueue(`0,`1)">
+            <summary>Enqueues an item at the appropriate location in the <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</summary>
+            <exception cref="T:System.ArgumentNullException"><paramref name="priority"/> is null.</exception>
+            <param name="priority">the priority.</param>
+            <param name="item">the item.</param>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.Dequeue">
+            <summary>Dequeues the next item in the <see cref="T:AUTools.Collections.PriorityQueue`2"/> and returns it.</summary>
+            <returns>the next item.</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.Peek">
+            <summary>Gets the next item in the <see cref="T:AUTools.Collections.PriorityQueue`2"/> without removing it.</summary>
+            <returns>the next item.</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.Contains(`1)">
+            <summary>Gets whether or not the <see cref="T:AUTools.Collections.PriorityQueue`2"/> contains the given item.</summary>
+            <param name="item">the item.</param>
+            <returns>whether or not the queue contains the item.</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.GetPriority(`1)">
+            <summary>Gets the priority of the given item.</summary>
+            <exception cref="T:System.ArgumentException">The queue does not contain the item.</exception>
+            <param name="item">the item.</param>
+            <returns>the item's priority (default value if not found)</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.UpdatePriority(`1,`0)">
+            <summary>Updates the priority of the given item if it is in the queue.</summary>
+            <exception cref="T:System.ArgumentNullException"><paramref name="newPriority"/> is null.</exception>
+            <param name="item">the item.</param>
+            <param name="newPriority">the new priority.</param>
+            <returns>whether or not the item was in the queue.</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.Remove(`1)">
+            <summary>Removes the first occurrence of a specific object from the <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</summary>
+            <param name="item">The object to remove from the <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</param>
+            <returns>
+            true if <paramref name="item" /> was successfully removed from the <see cref="T:AUTools.Collections.PriorityQueue`2"/>; otherwise, false. This method also returns false if
+            <paramref name="item" /> is not found in the original <see cref="T:AUTools.Collections.PriorityQueue`2"/>.
+            </returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.Clear">
+            <summary>Removes all items from the <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</summary>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:AUTools.Collections.PriorityQueue`2"/> is read-only.</exception>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.ToString">
+            <summary>Returns a string that represents the current object.</summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.GetEnumerator">
+            <summary>Returns an enumerator that iterates through the collection.</summary>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.DeepCopy``1(AUTools.Collections.PriorityQueue{`0,``0})">
+            <summary>Deep copies the <see cref="T:AUTools.Collections.PriorityQueue`2"/></summary>
+            <typeparam name="TV">the value type.</typeparam>
+            <param name="queue">the <see cref="T:AUTools.Collections.PriorityQueue`2"/> to copy.</param>
+            <returns>the new <see cref="T:AUTools.Collections.PriorityQueue`2"/></returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.FindIndex(`1)">
+            <summary>Finds the heap index of the item.</summary>
+            <param name="item">the item to find.</param>
+            <returns>the index, -1 if not found.</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.RemoveAt(System.Int32)">
+            <summary>Removes the item at the given position from the <see cref="T:AUTools.Collections.PriorityQueue`2"/></summary>
+            <param name="index">the index to remove the item from.</param>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.PercolateUp(System.Int32,System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>Percolates the item at the given index up the heap, if needed.</summary>
+            <param name="index">the current index of the item.</param>
+            <param name="item">the item.</param>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.PercolateDown(System.Int32,System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>Percolates the item at the given index down the heap, if needed.</summary>
+            <param name="index">the current index of the item.</param>
+            <param name="item">the item.</param>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.HigherPriority(System.Collections.Generic.KeyValuePair{`0,`1},System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Returns whether or not the first item's priority is less then the second item's priority
+            </summary>
+            <param name="leftItem">the first item</param>
+            <param name="rightItem">the second item</param>
+            <returns>whether or not the first item's priority is less then the second item's priority</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.IsRoot(System.Int32)">
+            <summary>
+            Gets whether or not the given node is the root
+            </summary>
+            <param name="index">the node index</param>
+            <returns>whether or not the node is the root</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.Parent(System.Int32)">
+            <summary>
+            Gets the parent of the given node
+            </summary>
+            <param name="index">the node index</param>
+            <returns>the parent node index</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TPriority,TValue}}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>Removes the first occurrence of a specific object from the <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</summary>
+            <param name="item">The object to remove from the <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</param>
+            <returns>
+            true if <paramref name="item" /> was successfully removed from the <see cref="T:AUTools.Collections.PriorityQueue`2"/>; otherwise, false. This method also returns false if
+            <paramref name="item" /> is not found in the original <see cref="T:AUTools.Collections.PriorityQueue`2"/>.
+            </returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TPriority,TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>Enqueues a priority/value pair at the appropriate location in the <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</summary>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:AUTools.Collections.PriorityQueue`2"/> is read-only.</exception>
+            <param name="item">The object to add to the <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</param>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TPriority,TValue}}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>Determines whether the <see cref="T:AUTools.Collections.PriorityQueue`2"/> contains a specific value.</summary>
+            <param name="item">The object to locate in the <see cref="T:AUTools.Collections.PriorityQueue`2"/>.</param>
+            <returns>true if <paramref name="item" /> is found in the <see cref="T:AUTools.Collections.PriorityQueue`2"/>; otherwise, false.</returns>
+        </member>
+        <member name="P:AUTools.Collections.PriorityQueue`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TPriority,TValue}}#IsReadOnly">
+            <summary>Gets a value indicating whether the <see cref="T:AUTools.Collections.PriorityQueue`2"/> is read-only.</summary>
+            <value>true if the <see cref="T:AUTools.Collections.PriorityQueue`2"/> is read-only; otherwise, false.</value>
+        </member>
+        <member name="P:AUTools.Collections.PriorityQueue`2.System#Collections#ICollection#SyncRoot">
+            <summary>Gets an object that can be used to synchronize access to the ICollection.</summary>
+            <value>The synchronise root.</value>
+        </member>
+        <member name="P:AUTools.Collections.PriorityQueue`2.System#Collections#ICollection#IsSynchronized">
+            <summary>Gets a value indicating whether access to the <see cref="T:System.Collections.ICollection"/> is synchronized (thread safe).</summary>
+            <value><c>true</c> if this <see cref="T:AUTools.Collections.PriorityQueue`2"/> is synchronized, <c>false</c> if not.</value>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Returns an enumerator that iterates through a collection.</summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+            <summary>Copies the elements of the <see cref="T:System.Collections.ICollection"/> to an Array, starting at a particular <see cref="T:System.Array"/> index.</summary>
+            <param name="array">
+            The one-dimensional <see cref="T:System.Array"/> that is the destination of the elements copied from ICollection. The <see cref="T:System.Array"/> must have zero-based indexing.
+            </param>
+            <param name="index">The zero-based index in array at which copying begins.</param>
+        </member>
+        <member name="M:AUTools.Collections.PriorityQueue`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TPriority,TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">
+            <summary>
+            Copies the elements of the <see cref="T:AUTools.Collections.PriorityQueue`2"/> to an <see cref="T:System.Array" />, starting at a particular <see cref="T:System.Array" /> index.
+            </summary>
+            <exception cref="T:System.ArgumentNullException"><paramref name="array" /> is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="arrayIndex" /> is less than 0.</exception>
+            <exception cref="T:System.ArgumentException">
+            The number of elements in the source <see cref="T:AUTools.Collections.PriorityQueue`2"/>
+            is greater than the available space from <paramref name="arrayIndex" /> to the end of the destination <paramref name="array" />.
+            </exception>
+            <param name="array">
+            The one-dimensional <see cref="T:System.Array" /> that is the destination of the elements copied from <see cref="T:AUTools.Collections.PriorityQueue`2"/>. The
+            <see cref="T:System.Array" /> must have zero-based indexing.
+            </param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array" /> at which copying begins.</param>
+        </member>
+        <member name="T:AUTools.Coordinates2">
+            <summary>Class that holds a set of 2D coordinates.</summary>
+        </member>
+        <member name="M:AUTools.Coordinates2.#ctor(System.Int32,System.Int32)">
+            <summary>Constructor.</summary>
+            <param name="x">the x coordinate.</param>
+            <param name="y">the y coordinate.</param>
+        </member>
+        <member name="M:AUTools.Coordinates2.#ctor(AUTools.Coordinates2)">
+            <summary>Deep copy constructor.</summary>
+            <param name="c">the coordinates to copy.</param>
+        </member>
+        <member name="P:AUTools.Coordinates2.X">
+            <summary>Gets the X coordinate.</summary>
+            <value>The x coordinate.</value>
+        </member>
+        <member name="P:AUTools.Coordinates2.Y">
+            <summary>Gets the Y coordinate.</summary>
+            <value>The y coordinate.</value>
+        </member>
+        <member name="P:AUTools.Coordinates2.Zero">
+            <summary>Gets a (0, 0) coordinates object.</summary>
+            <value>A new (0, 0) object. This will never be null.</value>
+        </member>
+        <member name="M:AUTools.Coordinates2.DistanceTo(AUTools.Coordinates2)">
+            <summary>Gets the distance between this point and another point.</summary>
+            <param name="c">the other point.</param>
+            <returns>the floating-point distance.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.Distance(AUTools.Coordinates2,AUTools.Coordinates2)">
+            <summary>Returns the distance between two points.</summary>
+            <param name="c1">the first point.</param>
+            <param name="c2">the second point.</param>
+            <returns>the floating-point distance.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.DistanceSquared(AUTools.Coordinates2,AUTools.Coordinates2)">
+            <summary>Returns the square of the distance between two points.</summary>
+            <remarks>Faster than <see cref="M:AUTools.Coordinates2.Distance(AUTools.Coordinates2,AUTools.Coordinates2)"/>, should be used when only comparison between distances is needed.</remarks>
+            <exception cref="T:System.ArgumentNullException">One of the parameters is null.</exception>
+            <param name="c1">the first point.</param>
+            <param name="c2">the second point.</param>
+            <returns>the floating-point distance.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.op_Equality(AUTools.Coordinates2,AUTools.Coordinates2)">
+            <summary>== operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>whether or not the objects are equal.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.op_Inequality(AUTools.Coordinates2,AUTools.Coordinates2)">
+            <summary>!= operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>whether or not the objects are not equal.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.op_Addition(AUTools.Coordinates2,AUTools.Coordinates2)">
+            <summary>+ operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>a new object, the sum of the two objects.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.op_Subtraction(AUTools.Coordinates2,AUTools.Coordinates2)">
+            <summary>- operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>a new object, the subtraction of the two objects.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.op_Multiply(AUTools.Coordinates2,System.Int32)">
+            <summary>* operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>a new object, the multiplication of the two objects.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.op_Division(AUTools.Coordinates2,System.Single)">
+            <summary>/ operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>a new object, the division of the two objects.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.Equals(System.Object)">
+            <summary>Determines whether the specified object is equal to the current object.</summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.Equals(AUTools.Coordinates2)">
+            <summary>Indicates whether the current object is equal to another object of the same type.</summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.GetHashCode">
+            <summary>Gets a hash code for the object.</summary>
+            <returns>the hash code.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.ToString">
+            <summary>Converts the coordinates to a string.</summary>
+            <returns>the coordinates, formatted as a string.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates2.DeepCopy">
+            <summary>Performs a deep copy of the object.</summary>
+            <returns>The copy. This will never be null.</returns>
+        </member>
+        <member name="T:AUTools.Coordinates3">
+            <summary>Class that holds a set of 3D coordinates.</summary>
+        </member>
+        <member name="M:AUTools.Coordinates3.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>Constructor.</summary>
+            <param name="x">the x coordinate.</param>
+            <param name="y">the y coordinate.</param>
+            <param name="z">the z coordinate.</param>
+        </member>
+        <member name="M:AUTools.Coordinates3.#ctor(AUTools.Coordinates3)">
+            <summary>Deep copy constructor.</summary>
+            <param name="c">the coordinates to copy.</param>
+        </member>
+        <member name="P:AUTools.Coordinates3.X">
+            <summary>Gets the X coordinate.</summary>
+            <value>The x coordinate.</value>
+        </member>
+        <member name="P:AUTools.Coordinates3.Y">
+            <summary>Gets the Y coordinate.</summary>
+            <value>The y coordinate.</value>
+        </member>
+        <member name="P:AUTools.Coordinates3.Z">
+            <summary>Gets the Z coordinate.</summary>
+            <value>The z coordinate.</value>
+        </member>
+        <member name="P:AUTools.Coordinates3.Zero">
+            <summary>Gets a (0, 0, 0) coordinates object.</summary>
+            <value>The zero. This will never be null.</value>
+        </member>
+        <member name="M:AUTools.Coordinates3.DistanceTo(AUTools.Coordinates3)">
+            <summary>Gets the distance between this point and another point.</summary>
+            <param name="c">the other point.</param>
+            <returns>the floating-point distance.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.Distance(AUTools.Coordinates3,AUTools.Coordinates3)">
+            <summary>Returns the distance between two points.</summary>
+            <param name="c1">the first point.</param>
+            <param name="c2">the second point.</param>
+            <returns>the floating-point distance.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.DistanceSquared(AUTools.Coordinates3,AUTools.Coordinates3)">
+            <summary>Returns the square of the distance between two points.</summary>
+            <remarks>Faster than <see cref="M:AUTools.Coordinates3.Distance(AUTools.Coordinates3,AUTools.Coordinates3)"/>, should be used when only comparison between distances is needed.</remarks>
+            <param name="c1">the first point.</param>
+            <param name="c2">the second point.</param>
+            <returns>the floating-point distance.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.op_Equality(AUTools.Coordinates3,AUTools.Coordinates3)">
+            <summary>== operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>whether or not the objects are equal.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.op_Inequality(AUTools.Coordinates3,AUTools.Coordinates3)">
+            <summary>!= operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>whether or not the objects are not equal.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.op_Addition(AUTools.Coordinates3,AUTools.Coordinates3)">
+            <summary>+ operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>a new object, the sum of the two objects.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.op_Subtraction(AUTools.Coordinates3,AUTools.Coordinates3)">
+            <summary>- operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>a new object, the subtraction of the two objects.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.op_Multiply(AUTools.Coordinates3,System.Int32)">
+            <summary>* operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>a new object, the multiplication of the two objects.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.op_Division(AUTools.Coordinates3,System.Single)">
+            <summary>/ operator.</summary>
+            <param name="a">the first object.</param>
+            <param name="b">the second object.</param>
+            <returns>a new object, the division of the two objects.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.op_Implicit(AUTools.Coordinates3)~AUTools.Coordinates2">
+            <summary>Implicit <see cref="T:AUTools.Coordinates3"/> -&gt; <see cref="T:AUTools.Coordinates2"/> conversion.</summary>
+            <param name="c">Coordinates to convert.</param>
+            <returns>A 2D coordinates.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.op_Implicit(AUTools.Coordinates2)~AUTools.Coordinates3">
+            <summary>Implicit <see cref="T:AUTools.Coordinates2"/> -&gt; <see cref="T:AUTools.Coordinates3"/> conversion.</summary>
+            <param name="c">Coordinates to convert.</param>
+            <returns>A 3D coordinates.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.Equals(System.Object)">
+            <summary>Determines whether the specified object is equal to the current object.</summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.Equals(AUTools.Coordinates3)">
+            <summary>Indicates whether the current object is equal to another object of the same type.</summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.GetHashCode">
+            <summary>Gets a hash code for the object.</summary>
+            <returns>the hash code.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.ToString">
+            <summary>Converts the <see cref="T:AUTools.Coordinates3"/> to a string.</summary>
+            <returns>the coordinates, formatted as a string.</returns>
+        </member>
+        <member name="M:AUTools.Coordinates3.DeepCopy">
+            <summary>Performs a deep copy of the object.</summary>
+            <returns>The copy. This will never be null.</returns>
+        </member>
+        <member name="T:AUTools.Graphs.Core.GraphBase`4">
+            <summary>Abstract parent class for a graph data structure.</summary>
+            <typeparam name="TIndexer">The node indexer type.</typeparam>
+            <typeparam name="TNodeContents">The node contents type.</typeparam>
+            <typeparam name="TNode">The node type.</typeparam>
+            <typeparam name="TEdge">The edge type.</typeparam>
+        </member>
+        <member name="F:AUTools.Graphs.Core.GraphBase`4.nodes">
+            <summary>Internal dictionary that stores nodes.</summary>
+        </member>
+        <member name="P:AUTools.Graphs.Core.GraphBase`4.Item(`0)">
+            <summary>Gets the node at the given index.</summary>
+            <param name="index">the index.</param>
+            <value>the node.</value>
+        </member>
+        <member name="P:AUTools.Graphs.Core.GraphBase`4.Count">
+            <summary>Gets the number of nodes in the graph.</summary>
+            <value>The graph count.</value>
+        </member>
+        <member name="P:AUTools.Graphs.Core.GraphBase`4.System#Collections#ICollection#SyncRoot">
+            <summary>Gets an object that can be used to synchronize access to the ICollection.</summary>
+            <value>The synchronise root.</value>
+        </member>
+        <member name="P:AUTools.Graphs.Core.GraphBase`4.System#Collections#ICollection#IsSynchronized">
+            <summary>Gets a value indicating whether access to the <see cref="T:System.Collections.ICollection"/> is synchronized (thread safe).</summary>
+            <value><c>true</c> if this <see cref="T:AUTools.Graphs.Core.GraphBase`4"/> is synchronized, <c>false</c> if not.</value>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.Clear">
+            <summary>Clears the graph.</summary>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.ContainsNode(`0)">
+            <summary>Gets whether or not the graph contains the given node.</summary>
+            <param name="position">The node position.</param>
+            <returns>Whether or not the graph contains the node.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.TryGetNode(`0,`2@)">
+            <summary>Gets the node at the specified position.</summary>
+            <param name="position">The node position.</param>
+            <param name="node">
+            When this method returns, contains node at the specified position, if the position is found; otherwise, the default value of <typeparamref name="TNode"/>. This parameter is
+            passed uninitialized.
+            </param>
+            <returns><c>true</c> if the graph contains an element with the specified key; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.AddNode(`0,`1,System.Object[])">
+            <summary>Adds a node into the graph.</summary>
+            <param name="position">the position to add the node.</param>
+            <param name="contents">the contents of the node.</param>
+            <param name="values">any additional information needed for the node.</param>
+            <returns>whether or not the node was successfully added.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.AddUndirectedEdge(`0,`0,System.Object[])">
+            <summary>Adds a bidirectional edge between the given nodes.</summary>
+            <param name="firstNode">the index of the first node.</param>
+            <param name="secondNode">the index of the second node.</param>
+            <param name="values">any additional information needed for the edge.</param>
+            <returns>whether or not the edge was successfully added.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.AddUndirectedEdge(System.Boolean,`0,`0,System.Object[])">
+            <summary>Adds a bidirectional edge between the given nodes.</summary>
+            <param name="allowDuplicates">if false, the edge will only be added if an edge to the same node does not already exist. True is faster.</param>
+            <param name="firstNode">the index of the first node.</param>
+            <param name="secondNode">the index of the second node.</param>
+            <param name="values">any additional information needed for the edge.</param>
+            <returns>whether or not the edge was successfully added.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.AddDirectedEdge(`0,`0,System.Object[])">
+            <summary>Adds a unidirectional edge between the given nodes.</summary>
+            <param name="fromNode">the index of the first node.</param>
+            <param name="toNode">the index of the second node.</param>
+            <param name="values">any additional information needed for the edge.</param>
+            <returns>whether or not the edge was successfully added.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.AddDirectedEdge(System.Boolean,`0,`0,System.Object[])">
+            <summary>Adds a unidirectional edge between the given nodes.</summary>
+            <param name="allowDuplicates">if false, the edge will only be added if an edge to the same node does not already exist. True is faster.</param>
+            <param name="fromNode">the index of the first node.</param>
+            <param name="toNode">the index of the second node.</param>
+            <param name="values">any additional information needed for the edge.</param>
+            <returns>whether or not the edge was successfully added.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.AddUndirectedEdgeUnsafe(`0,`0,System.Object[])">
+            <summary>Adds a bidirectional edge between the given nodes NOTE: Does not check if nodes exist!</summary>
+            <param name="firstNode">the index of the first node.</param>
+            <param name="secondNode">the index of the second node.</param>
+            <param name="values">any additional information needed for the edge.</param>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.AddUndirectedEdgeUnsafe(System.Boolean,`0,`0,System.Object[])">
+            <summary>Adds a bidirectional edge between the given nodes NOTE: Does not check if nodes exist!</summary>
+            <param name="allowDuplicates">if false, the edge will only be added if an edge to the same node does not already exist. True is faster.</param>
+            <param name="firstNode">the index of the first node.</param>
+            <param name="secondNode">the index of the second node.</param>
+            <param name="values">any additional information needed for the edge.</param>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.AddDirectedEdgeUnsafe(`0,`0,System.Object[])">
+            <summary>Adds a unidirectional edge between the given nodes NOTE: Does not check if nodes exist!</summary>
+            <param name="fromNode">the index of the first node.</param>
+            <param name="toNode">the index of the second node.</param>
+            <param name="values">any additional information needed for the edge.</param>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.AddDirectedEdgeUnsafe(System.Boolean,`0,`0,System.Object[])">
+            <summary>Adds a unidirectional edge between the given nodes NOTE: Does not check if nodes exist!</summary>
+            <param name="allowDuplicates">if false, the edge will only be added if an edge to the same node does not already exist. True is faster.</param>
+            <param name="fromNode">the index of the first node.</param>
+            <param name="toNode">the index of the second node.</param>
+            <param name="values">any additional information needed for the edge.</param>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.RemoveNode(`0)">
+            <summary>
+            Removes the given node and any bidirectional edges attached to it from the graph WARNING: Any unidirectional edges attached to this node will not be removed and be left
+            broken.
+            </summary>
+            <param name="node">the node to remove.</param>
+            <returns>whether the node was successfully removed.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.GetEnumerator">
+            <summary>Returns an enumerator that iterates through the collection.</summary>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Returns an enumerator that iterates through a collection.</summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+            <summary>Copies the elements of the <see cref="T:System.Collections.ICollection"/> to an Array, starting at a particular <see cref="T:System.Array"/> index.</summary>
+            <param name="array">
+            The one-dimensional <see cref="T:System.Array"/> that is the destination of the elements copied from ICollection. The <see cref="T:System.Array"/> must have zero-based indexing.
+            </param>
+            <param name="index">The zero-based index in array at which copying begins.</param>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphBase`4.CreateNode(`0,`1,System.Object[])">
+            <summary>Creates a node.</summary>
+            <param name="position">the node position.</param>
+            <param name="contents">the contents of the node.</param>
+            <param name="values">any additional information needed for the node.</param>
+            <returns>The new node. This will never be null.</returns>
+        </member>
+        <member name="T:AUTools.Graphs.Core.GraphEdge`1">
+            <summary>An edge in a graph.</summary>
+            <typeparam name="TIndexer">The node indexer type.</typeparam>
+        </member>
+        <member name="P:AUTools.Graphs.Core.GraphEdge`1.End">
+            <summary>Gets the second node of the edge.</summary>
+            <value>The end.</value>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphEdge`1.#ctor(`0)">
+            <summary>Constructor.</summary>
+            <param name="endNode">the second node on the edge.</param>
+        </member>
+        <member name="M:AUTools.Graphs.Core.GraphEdge`1.ToString">
+            <summary>Returns a string that represents the current object.</summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="T:AUTools.Graphs.Core.IGraphNodeContents">
+            <summary>Interface for graph node contents compatibility.</summary>
+        </member>
+        <member name="M:AUTools.Graphs.Core.IGraphNodeContents.Destroy">
+            <summary>Destroys the node contents.</summary>
+        </member>
+        <member name="T:AUTools.Graphs.Core.NodeBase`3">
+            <summary>Abstract parent class for a node in a graph.</summary>
+            <typeparam name="TIndexer">The node indexer type.</typeparam>
+            <typeparam name="TNodeContents">the node contents type.</typeparam>
+            <typeparam name="TEdge">the edge type.</typeparam>
+        </member>
+        <member name="M:AUTools.Graphs.Core.NodeBase`3.#ctor(`1,`0)">
+            <summary>Constructor.</summary>
+            <param name="contents">the contents of the node.</param>
+            <param name="position">the position of the node.</param>
+        </member>
+        <member name="P:AUTools.Graphs.Core.NodeBase`3.Edges">
+            <summary>Gets the edges attached to the node.</summary>
+            <value>The edges.</value>
+        </member>
+        <member name="P:AUTools.Graphs.Core.NodeBase`3.Contents">
+            <summary>Gets or sets the node contents.</summary>
+            <value>The contents.</value>
+        </member>
+        <member name="P:AUTools.Graphs.Core.NodeBase`3.Position">
+            <summary>Gets the node's position.</summary>
+            <value>The position.</value>
+        </member>
+        <member name="M:AUTools.Graphs.Core.NodeBase`3.AddEdge(`0,System.Boolean,System.Object[])">
+            <summary>Adds an edge to from this node to the given node.</summary>
+            <param name="toNode">the node the edge goes to.</param>
+            <param name="allowDuplicates">if false, the edge will only be added if an edge to the same node does not already exist. True is faster.</param>
+            <param name="values">any additional information needed for the edge.</param>
+        </member>
+        <member name="M:AUTools.Graphs.Core.NodeBase`3.Equals(AUTools.Graphs.Core.NodeBase{`0,`1,`2})">
+            <summary>Indicates whether the current object is equal to another object of the same type.</summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.NodeBase`3.ToString">
+            <summary>Returns a string that represents the current object.</summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.NodeBase`3.GetEnumerator">
+            <summary>Returns an enumerator that iterates through the collection.</summary>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.NodeBase`3.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Returns an enumerator that iterates through a collection.</summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Core.NodeBase`3.CreateEdge(`0,System.Object[])">
+            <summary>Creates an edge to go from this node to the given node.</summary>
+            <param name="toNode">the node the edge goes to.</param>
+            <param name="values">any additional information needed for the edge.</param>
+            <returns>The new edge. This will never be null.</returns>
+        </member>
+        <member name="T:AUTools.Graphs.IPathfindingGraphNodeContents">
+            <summary>Interface for pathfinding graph node contents compatibility.</summary>
+        </member>
+        <member name="M:AUTools.Graphs.IPathfindingGraphNodeContents.MakeOccupied">
+            <summary>Method to call to make a node occupied.</summary>
+        </member>
+        <member name="M:AUTools.Graphs.IPathfindingGraphNodeContents.MakeUnoccupied">
+            <summary>Method to call to make a node unoccupied.</summary>
+        </member>
+        <member name="T:AUTools.Graphs.IPosition`1">
+            <summary>Interface for positional classes.</summary>
+            <typeparam name="T">Generic type parameter.</typeparam>
+        </member>
+        <member name="M:AUTools.Graphs.IPosition`1.DistanceTo(`0)">
+            <summary>Gets the distance between this position and another position.</summary>
+            <param name="other">the other position.</param>
+            <returns>the floating-point distance.</returns>
+        </member>
+        <member name="T:AUTools.Graphs.PathfindingGraph`2">
+            <summary>Class for a pathfinding graph data structure.</summary>
+            <typeparam name="TPosition">The node position type.</typeparam>
+            <typeparam name="TNodeContents">the node contents type.</typeparam>
+        </member>
+        <member name="M:AUTools.Graphs.PathfindingGraph`2.FindPath(`0,`0,System.Boolean)">
+            <summary>Finds the shortest path between the start and end points with A* pathfinding, ignoring occupied nodes.</summary>
+            <param name="start">the start position.</param>
+            <param name="end">the end position.</param>
+            <param name="endAlwaysValid">set to true to ignore if the end node is occupied.</param>
+            <returns>the path, empty if no path found.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.PathfindingGraph`2.FindPath(`0,`0,AUTools.Graphs.Pathfinding.PathfindingTest{`0,`1},System.Boolean)">
+            <summary>Finds the shortest path between the start and end points with A* pathfinding, only using nodes that match the given test.</summary>
+            <param name="start">the start position.</param>
+            <param name="end">the end position.</param>
+            <param name="test">the custom is node valid test to use.</param>
+            <param name="endAlwaysValid">set to true to make the end node ignore the validation check.</param>
+            <returns>the path, empty if no path found.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.PathfindingGraph`2.CreateNode(`0,`1,System.Object[])">
+            <summary>Creates a node for the graph.</summary>
+            <param name="position">the position to add the node.</param>
+            <param name="contents">the contents of the node.</param>
+            <param name="unused">this parameter not used.</param>
+            <returns>the new node.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.PathfindingGraph`2.DoPathfinding(`0,`0,System.Boolean)">
+            <summary>Finds the shortest path between the start and end points with A* pathfinding.</summary>
+            <param name="start">the start position.</param>
+            <param name="end">the end position.</param>
+            <param name="endAlwaysValid">whether the end node should ignore the validation check.</param>
+            <returns>the path, empty if no path found.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.PathfindingGraph`2.IsNodeUnoccupied(AUTools.Graphs.Pathfinding.PathfindingNode{`0,`1})">
+            <summary>Tests for whether or not the node is unoccupied.</summary>
+            <param name="node">the node.</param>
+            <returns>whether or not the node is unoccupied.</returns>
+        </member>
+        <member name="T:AUTools.Graphs.Pathfinding.PathfindingEdge`1">
+            <summary>Class for an edge in a pathfinding graph.</summary>
+            <typeparam name="TPosition">The node position type.</typeparam>
+        </member>
+        <member name="P:AUTools.Graphs.Pathfinding.PathfindingEdge`1.Weight">
+            <summary>Gets or sets the weight of the edge.</summary>
+            <value>The weight.</value>
+        </member>
+        <member name="M:AUTools.Graphs.Pathfinding.PathfindingEdge`1.#ctor(`0,System.Single)">
+            <summary>Constructor.</summary>
+            <param name="endNode">the second node on the edge.</param>
+            <param name="weight">the weight of the edge (default 1)</param>
+        </member>
+        <member name="T:AUTools.Graphs.Pathfinding.PathfindingTest`2">
+            <summary>Delegate for doing tests on nodes for pathfinding.</summary>
+            <typeparam name="TPosition">the node position type.</typeparam>
+            <typeparam name="TNodeContents">the node contents type.</typeparam>
+            <param name="node">the node.</param>
+            <returns>whether or not the node should be included in the pathfinding.</returns>
+        </member>
+        <member name="T:AUTools.Graphs.Pathfinding.PathfindingNode`2">
+            <summary>Class for a node in a pathfinding graph.</summary>
+            <typeparam name="TPosition">the position type.</typeparam>
+            <typeparam name="TNodeContents">the node contents type.</typeparam>
+        </member>
+        <member name="M:AUTools.Graphs.Pathfinding.PathfindingNode`2.#ctor(`1,`0)">
+            <summary>Constructor.</summary>
+            <param name="contents">the contents of the node.</param>
+            <param name="position">the position of the node.</param>
+        </member>
+        <member name="P:AUTools.Graphs.Pathfinding.PathfindingNode`2.DistanceFromStart">
+            <summary>Gets or sets the distance from the start.</summary>
+            <value>The distance from the path start.</value>
+        </member>
+        <member name="P:AUTools.Graphs.Pathfinding.PathfindingNode`2.EstimateToEnd">
+            <summary>Gets or sets the estimated distance to the end node.</summary>
+            <value>The estimate to the path end.</value>
+        </member>
+        <member name="P:AUTools.Graphs.Pathfinding.PathfindingNode`2.FromNode">
+            <summary>Gets or sets the back-node-pointer.</summary>
+            <value>The previous node in the current search path.</value>
+        </member>
+        <member name="P:AUTools.Graphs.Pathfinding.PathfindingNode`2.Occupied">
+            <summary>Gets or sets whether or not the node is occupied.</summary>
+            <value><c>true</c> if occupied, <c>false</c> if not.</value>
+        </member>
+        <member name="M:AUTools.Graphs.Pathfinding.PathfindingNode`2.Equals(AUTools.Graphs.Pathfinding.PathfindingNode{`0,`1})">
+            <summary>Indicates whether the current object is equal to another object of the same type.</summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.</returns>
+        </member>
+        <member name="M:AUTools.Graphs.Pathfinding.PathfindingNode`2.CreateEdge(`0,System.Object[])">
+            <summary>Creates an edge to go from this node to the given node.</summary>
+            <param name="toNode">the node the edge goes to.</param>
+            <param name="values">any additional information needed for the edge.</param>
+            <returns>The new edge.</returns>
+        </member>
+        <member name="T:AUTools.IDeepCopyable`1">
+            <summary>Interface for classes that can be deep copied.</summary>
+            <typeparam name="T">The copy type.</typeparam>
+        </member>
+        <member name="M:AUTools.IDeepCopyable`1.DeepCopy">
+            <summary>Performs a deep copy of the object.</summary>
+            <returns>The copy. This will never be null.</returns>
+        </member>
+        <member name="T:AUTools.Utils">
+            <summary>Static class for utility functions.</summary>
+        </member>
+        <member name="M:AUTools.Utils.ToStringSpaced(System.Enum)">
+            <summary>Spaces out an enumeration string using <see cref="M:AUTools.Utils.CamelSpace(System.String)"/>.</summary>
+            <param name="enumValue">The enumeration value to space out.</param>
+            <returns>The string representation of <paramref name="enumValue"/> with spaces inserted.</returns>
+        </member>
+        <member name="M:AUTools.Utils.CamelSpace(System.String)">
+            <summary>Spaces out a camel or Pascal-case string.</summary>
+            <param name="str">The string to space out.</param>
+            <returns><paramref name="str"/> with spaces inserted.</returns>
+            <remarks>
+            This method adds a space before a character given by <c>str[i]</c> if:
+            <code>
+            str[i] is uppercase
+                AND str[i - 1] is not whitespace AND is not uppercase
+                    OR str[i + 1] exists AND is not uppercase
+                    AND str[i - 2] exists AND is uppercase
+            OR str[i] is not a letter AND is not whitespace
+                AND str[i - 1] is a letter
+            </code>
+            </remarks>
+        </member>
+        <member name="M:AUTools.Utils.LastItem``1(System.Collections.Generic.IList{``0})">
+            <summary>Returns the last item in the list.</summary>
+            <remarks>This is a convenience method equivalent to writing <c>source[source.Count - 1]</c>.</remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">The list is empty.</exception>
+            <typeparam name="T">the list type.</typeparam>
+            <param name="source">the list to get the last item of.</param>
+            <returns>the last item.</returns>
+        </member>
+        <member name="M:AUTools.Utils.MinValue``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">
+            <summary>Returns the item in the list with the minimum value returned from the selector.</summary>
+            <typeparam name="T">the enumerable type.</typeparam>
+            <param name="source">the enumerable to check.</param>
+            <param name="selector">The function to use to choose what value to compare.</param>
+            <returns>the item with the smallest selected value.</returns>
+        </member>
+        <member name="M:AUTools.Utils.MinValue``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32})">
+            <summary>Returns the item in the list with the minimum value returned from the selector.</summary>
+            <typeparam name="T">the enumerable type.</typeparam>
+            <param name="source">the enumerable to check.</param>
+            <param name="selector">The function to use to choose what value to compare.</param>
+            <returns>the item with the smallest selected value.</returns>
+        </member>
+        <member name="M:AUTools.Utils.ContainsExact``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>Checks whether this enumerable contains all of the items in the other enumerable, including the same counts of duplicates, if any.</summary>
+            <typeparam name="T">The enumerable type.</typeparam>
+            <param name="source">The enumerable to check.</param>
+            <param name="other">The enumerable containing the items to look for.</param>
+            <returns><c>true</c> if all of the items were found, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:AUTools.Utils.RemoveAll``2(System.Collections.Generic.Dictionary{``0,``1},System.Func{System.Collections.Generic.KeyValuePair{``0,``1},System.Boolean})">
+            <summary>Removes all of the items that match the given expression from the dictionary.</summary>
+            <typeparam name="TKey">the key type.</typeparam>
+            <typeparam name="TValue">the value type.</typeparam>
+            <param name="source">the dictionary.</param>
+            <param name="match">the expression.</param>
+        </member>
+        <member name="M:AUTools.Utils.ToDictionary``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})">
+            <summary>Creates a dictionary out of the keys and values in a given collection of <see cref="T:System.Collections.Generic.KeyValuePair`2"/> objects.</summary>
+            <typeparam name="TKey">The type of the keys in <paramref name="source"/>.</typeparam>
+            <typeparam name="TSource">The type of the values in <paramref name="source"/>.</typeparam>
+            <param name="source">An enumerable of <see cref="T:System.Collections.Generic.KeyValuePair`2"/> objects from which to create a dictionary.</param>
+            <returns>A dictionary representation of the enumerable.</returns>
+        </member>
+        <member name="M:AUTools.Utils.AddHilbertCurve``3(AUTools.Graphs.Core.GraphBase{AUTools.Coordinates2,``0,``1,``2},System.Int32)">
+            <summary>Fills in a hilbert curve of the given size into the given graph.</summary>
+            <exception cref="T:System.ArgumentNullException"><paramref name="graph"/> is null.</exception>
+            <typeparam name="TNodeContents">the node contents type.</typeparam>
+            <typeparam name="TNode">the node type.</typeparam>
+            <typeparam name="TEdge">the edge type.</typeparam>
+            <param name="graph">the graph, should be empty.</param>
+            <param name="size">the size; the grid will be a 2^size by 2^size square.</param>
+        </member>
+        <member name="M:AUTools.Utils.HCurvePos2Coor(System.Int32,System.Int32)">
+            <summary>Converts a Hilbert curve position to grid coordinates.</summary>
+            <remarks>Sourced from 17-BIT's talk at Unite 2014 about procedural dungeon generation in their title Galak Z. https://www.youtube.com/watch?v=ySTpjT6JYFU.</remarks>
+            <param name="gridCells">the number of cells in the grid.</param>
+            <param name="curvePosition">the position in the curve.</param>
+            <returns>the coordinates.</returns>
+        </member>
+        <member name="M:AUTools.Utils.Hash3(System.Int32,System.Int32,System.Int32)">
+            <summary>Sourced from http://burtleburtle.net/bob/c/lookup3.c.</summary>
+            <param name="a">An int to process.</param>
+            <param name="b">An int to process.</param>
+            <param name="c">An int to process.</param>
+            <returns>a hash code.</returns>
+        </member>
+        <member name="M:AUTools.Utils.HashAll(System.Byte[])">
+            <summary>Sourced from http://burtleburtle.net/bob/c/lookup3.c.</summary>
+            <param name="items">The items. This cannot be null.</param>
+            <returns>a hash code.</returns>
+        </member>
+        <member name="M:AUTools.Utils.Mix(System.UInt32@,System.UInt32@,System.UInt32@)">
+            <summary>
+            Sourced from http://burtleburtle.net/bob/c/lookup3.c
+            </summary>
+        </member>
+        <member name="M:AUTools.Utils.AddNode``3(AUTools.Graphs.Core.GraphBase{AUTools.Coordinates2,``0,``1,``2},System.Int32,System.Int32,``0,System.Object[])">
+            <summary>Adds a node into the graph.</summary>
+            <typeparam name="TNodeContents">the node contents type.</typeparam>
+            <typeparam name="TNode">the node type.</typeparam>
+            <typeparam name="TEdge">the edge type.</typeparam>
+            <param name="graph">the graph.</param>
+            <param name="x">the x position for the node.</param>
+            <param name="y">the y position for the node.</param>
+            <param name="contents">the contents of the node.</param>
+            <param name="values">any additional information needed for the node.</param>
+            <returns>whether or not the node was successfully added.</returns>
+        </member>
+        <member name="M:AUTools.Utils.AddNode``3(AUTools.Graphs.Core.GraphBase{AUTools.Coordinates3,``0,``1,``2},System.Int32,System.Int32,System.Int32,``0,System.Object[])">
+            <summary>Adds a node into the graph.</summary>
+            <typeparam name="TNodeContents">the node contents type.</typeparam>
+            <typeparam name="TNode">the node type.</typeparam>
+            <typeparam name="TEdge">the edge type.</typeparam>
+            <param name="graph">the graph.</param>
+            <param name="x">the x position for the node.</param>
+            <param name="y">the y position for the node.</param>
+            <param name="z">the z position for the node.</param>
+            <param name="contents">the contents of the node.</param>
+            <param name="values">any additional information needed for the node.</param>
+            <returns>whether or not the node was successfully added.</returns>
+        </member>
+        <member name="M:AUTools.Utils.DeepCopy``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>Returns the data in list form, deep copying all of the items.</summary>
+            <typeparam name="T">Generic type parameter.</typeparam>
+            <param name="enumerable">The enumerable to act on. This cannot be null.</param>
+            <returns>A <see cref="T:System.Collections.Generic.List`1"/>. This will never be null.</returns>
+        </member>
+        <member name="M:AUTools.Utils.DeepCopy``2(System.Collections.Generic.Dictionary{``0,``1})">
+            <summary>Returns a new dictionary with the same keys and deep-copied versions of the items.</summary>
+            <typeparam name="TKey">Type of the key.</typeparam>
+            <typeparam name="TValue">Type of the value.</typeparam>
+            <param name="dict">The dict to act on. This cannot be null.</param>
+            <returns>A <see cref="T:System.Collections.Generic.Dictionary`2"/>. This will never be null.</returns>
+        </member>
+    </members>
+</doc>

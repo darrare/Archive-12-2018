@@ -1,0 +1,141 @@
+Initialize engine version: 5.2.2f1 (3757309da7e7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon R9 200 Series (ID=0x6810)
+    Vendor:   ATI
+    VRAM:     2026 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.129 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Initialize engine version: 5.2.2f1 (3757309da7e7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon R9 200 Series (ID=0x6810)
+    Vendor:   ATI
+    VRAM:     2026 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.047 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\System.dll (this message is harmless)
+NetMangager:Start()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 6268 -> priority: 1 
+Initialize engine version: 5.2.2f1 (3757309da7e7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon R9 200 Series (ID=0x6810)
+    Vendor:   ATI
+    VRAM:     2026 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.046 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\System.dll (this message is harmless)
+NetMangager:Start()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 618c -> priority: 1 
+Platform assembly: F:\Programming\Unity\Projects\Swingline\TestStaffClient\TestStaffClient_Data\Managed\System.dll (this message is harmless)
+NetMangager:Start()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 616c -> priority: 1 
+OnServerReceiveMessage: Received Message {"ack":1}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Connection Success...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.105006 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 209.
+Total: 0.283372 ms (FindLiveObjects: 0.024775 ms CreateObjectMapping: 0.019820 ms MarkObjects: 0.230104 ms  DeleteObjects: 0.008052 ms)
+
+OnServerReceiveMessage: Received Message {"ack":1}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Connection Success...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.094476 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 209.
+Total: 0.282443 ms (FindLiveObjects: 0.024466 ms CreateObjectMapping: 0.019510 ms MarkObjects: 0.229485 ms  DeleteObjects: 0.007742 ms)
+
+OnServerReceiveMessage: Received Message {"ack":1}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Connection Success...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.055764 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 209.
+Total: 0.252712 ms (FindLiveObjects: 0.017962 ms CreateObjectMapping: 0.010839 ms MarkObjects: 0.214619 ms  DeleteObjects: 0.008361 ms)
+
+OnServerReceiveMessage: Received Message {"homeTeam":"The guys","awayTeam":"The girls","connectionId":3,"fieldNum":5}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+OnServerReceiveMessage: Received Message {"homeTeam":"Team a","awayTeam":"Team b","connectionId":2,"fieldNum":4}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+OnServerReceiveMessage: Received Message {"homeTeam":"asdasd","awayTeam":"asdasd","connectionId":4,"fieldNum":6}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+

@@ -1,0 +1,883 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AUTools.Unity</name>
+    </assembly>
+    <members>
+        <member name="T:AUTools.Unity.InputAction">
+            <summary>A universal class for a Unity input mapping.</summary>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.#ctor(UnityEngine.KeyCode)">
+            <summary>Constructor for a key.</summary>
+            <param name="key">the keyboard key code to check.</param>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.#ctor(System.Int32)">
+            <summary>Constructor for a mouse button.</summary>
+            <param name="mouseButton">the mouse button to check.</param>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.#ctor(AUTools.Unity.MousewheelDirection)">
+            <summary>Constructor for a mousewheel direction.</summary>
+            <param name="direction">the mousewheel direction to check.</param>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.#ctor(AUTools.Unity.InputAction)">
+            <summary>Copy constructor.</summary>
+            <param name="inputAction">The input action we want to copy.</param>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.Type">
+            <summary>Gets the input type of the action.</summary>
+            <value>The input type.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.IsBlank">
+            <summary>Gets whether the input is blank.</summary>
+            <value><c>true</c> if this InputAction is blank, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.Key">
+            <summary>Gets or sets the input action as a keyboard key.</summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.MouseButton">
+            <summary>Gets or sets the input action as a mouse button.</summary>
+            <value>The mouse button.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.Mousewheel">
+            <summary>Gets or sets the input action as a mousewheel direction.</summary>
+            <value>The mousewheel direction.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.Value">
+            <summary>Gets the input's current value.</summary>
+            <remarks>0 or 1 for digital inputs, 0 to 1 or -1 to 1 for analog inputs.</remarks>
+            <value>The input's value.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.IsPressed">
+            <summary>Returns whether or not the input is pressed (value is nonzero)</summary>
+            <value><c>true</c> if the input is pressed, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.JustPressed">
+            <summary>Returns whether or not the key or the mouse button began being pressed on the last frame.</summary>
+            <value><c>true</c> if the input was just pressed, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.JustReleased">
+            <summary>Returns whether or not the key or the mouse button is up.</summary>
+            <value><c>true</c> if the input was just released, <c>false</c> if not.</value>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.MakeBlank">
+            <summary>Makes the input action a blank input.</summary>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.DeepCopy">
+            <summary>Performs a deep copy of the object.</summary>
+            <returns>The copy. This will never be null.</returns>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.ToString">
+            <summary>Returns a string that represents the current object.</summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.SetCustomMouseButtonName(System.Int32,System.String)">
+            <summary>Sets a custom name for a mouse button that will be used when ToString is called on an InputAction using that button.</summary>
+            <remarks>By default, mouse buttons 0, 1, and 2 are mapped to "Left Mouse Button," "Right Mouse Button," and "Middle Mouse Button.".</remarks>
+            <param name="button">the mouse button number.</param>
+            <param name="name">the name to use for the button.</param>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.SetCustomKeyName(UnityEngine.KeyCode,System.String)">
+            <summary>Sets a custom name for a keyboard key that will be used when ToString is called on an InputAction using that button.</summary>
+            <remarks>By default, KeyCode.Return is mapped to "Enter.".</remarks>
+            <param name="key">the key code.</param>
+            <param name="name">the name to use for the button.</param>
+        </member>
+        <member name="T:AUTools.Unity.InputAction.IQueriedInput">
+            <summary>Interface for objects that query input.</summary>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.IQueriedInput.JustPressed">
+            <summary>Returns whether the input began being entered on the last frame.</summary>
+            <value><c>true</c> if just pressed, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.IQueriedInput.JustReleased">
+            <summary>Returns whether the input stopped being entered on the last frame.</summary>
+            <value><c>true</c> if just released, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.IQueriedInput.Value">
+            <summary>Gets the input's current value.</summary>
+            <remarks>0 or 1 for digital inputs, 0 to 1 or -1 to 1 for analog inputs.</remarks>
+            <value>The input's value.</value>
+        </member>
+        <member name="T:AUTools.Unity.InputAction.QueriedMouseInput">
+            <summary>Class that queries mouse input.</summary>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedMouseInput.#ctor(System.Int32)">
+            <summary>Constructor.</summary>
+            <param name="button">the mouse button to check.</param>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedMouseInput.#ctor(AUTools.Unity.InputAction.QueriedMouseInput)">
+            <summary>Copy constructor.</summary>
+            <param name="input">the input to copy.</param>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedMouseInput.Button">
+            <summary>Gets or sets which mouse button to use.</summary>
+            <value>The button.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedMouseInput.JustPressed">
+            <summary>Returns whether the input began being entered on the last frame.</summary>
+            <value><c>true</c> if just pressed, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedMouseInput.JustReleased">
+            <summary>Returns whether the input stopped being entered on the last frame.</summary>
+            <value><c>true</c> if just released, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedMouseInput.Value">
+            <summary>Gets the input's current value.</summary>
+            <remarks>0 or 1 for digital inputs, 0 to 1 or -1 to 1 for analog inputs.</remarks>
+            <value>The value.</value>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedMouseInput.DeepCopy">
+            <summary>Performs a deep copy of the object.</summary>
+            <returns>The copy. This will never be null.</returns>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedMouseInput.ToString">
+            <summary>Returns a string that represents the current object.</summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="T:AUTools.Unity.InputAction.QueriedKeyInput">
+            <summary>Class that queries keyboard input.</summary>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedKeyInput.#ctor(UnityEngine.KeyCode)">
+            <summary>Constructor.</summary>
+            <param name="key">the key to check.</param>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedKeyInput.#ctor(AUTools.Unity.InputAction.QueriedKeyInput)">
+            <summary>Copy constructor.</summary>
+            <param name="input">the input to copy.</param>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedKeyInput.Key">
+            <summary>Gets or sets the key to check.</summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedKeyInput.JustPressed">
+            <summary>Returns whether the input began being entered on the last frame.</summary>
+            <value><c>true</c> if just pressed, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedKeyInput.JustReleased">
+            <summary>Returns whether the input stopped being entered on the last frame.</summary>
+            <value><c>true</c> if just released, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedKeyInput.Value">
+            <summary>Gets the input's current value.</summary>
+            <remarks>0 or 1 for digital inputs, 0 to 1 or -1 to 1 for analog inputs.</remarks>
+            <value>The value.</value>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedKeyInput.DeepCopy">
+            <summary>Performs a deep copy of the object.</summary>
+            <returns>The copy. This will never be null.</returns>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedKeyInput.ToString">
+            <summary>Returns a string that represents the current object.</summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="T:AUTools.Unity.InputAction.QueriedMousewheelInput">
+            <summary>Class that queries mousewheel input.</summary>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedMousewheelInput.#ctor(AUTools.Unity.MousewheelDirection)">
+            <summary>Constructor.</summary>
+            <param name="direction">the mousewheel direction to check.</param>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedMousewheelInput.#ctor(AUTools.Unity.InputAction.QueriedMousewheelInput)">
+            <summary>Copy constructor.</summary>
+            <param name="input">the input to copy.</param>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedMousewheelInput.Direction">
+            <summary>Gets or sets which direction to check.</summary>
+            <value>The direction.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedMousewheelInput.JustPressed">
+            <summary>Returns whether the input began being entered on the last frame.</summary>
+            <value><c>true</c> if just pressed, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedMousewheelInput.JustReleased">
+            <summary>Returns whether the input stopped being entered on the last frame.</summary>
+            <value><c>true</c> if just released, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.InputAction.QueriedMousewheelInput.Value">
+            <summary>Gets the input's current value.</summary>
+            <remarks>0 or 1 for digital inputs, 0 to 1 or -1 to 1 for analog inputs.</remarks>
+            <value>The scroll value.</value>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedMousewheelInput.DeepCopy">
+            <summary>Performs a deep copy of the object.</summary>
+            <returns>the copy.</returns>
+        </member>
+        <member name="M:AUTools.Unity.InputAction.QueriedMousewheelInput.ToString">
+            <summary>Returns a string that represents the current object.</summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="T:AUTools.Unity.InputType">
+            <summary>Enumeration for different input mapping types.</summary>
+        </member>
+        <member name="F:AUTools.Unity.InputType.None">
+            <summary>Input is not mapped.</summary>
+        </member>
+        <member name="F:AUTools.Unity.InputType.Mouse">
+            <summary>Input is mapped to a mouse button.</summary>
+        </member>
+        <member name="F:AUTools.Unity.InputType.Keyboard">
+            <summary>Input is mapped to a keyboard key.</summary>
+        </member>
+        <member name="F:AUTools.Unity.InputType.Mousewheel">
+            <summary>Input is mapped to a mousewheel direction.</summary>
+        </member>
+        <member name="F:AUTools.Unity.InputType.Joystick">
+            <summary>Input is mapped to a joystick.</summary>
+        </member>
+        <member name="T:AUTools.Unity.MousewheelDirection">
+            <summary>Enumeration for possible mousewheel input directions.</summary>
+        </member>
+        <member name="F:AUTools.Unity.MousewheelDirection.Up">
+            <summary>Scrolling up/forward on the mousewheel.</summary>
+        </member>
+        <member name="F:AUTools.Unity.MousewheelDirection.Down">
+            <summary>Scrolling down/backward on the mousewheel.</summary>
+        </member>
+        <member name="F:AUTools.Unity.MousewheelDirection.Left">
+            <summary>Scrolling left on the mousewheel (not supported by standard mousewheels).</summary>
+        </member>
+        <member name="F:AUTools.Unity.MousewheelDirection.Right">
+            <summary>Scrolling right on the mousewheel (not supported by standard mousewheels).</summary>
+        </member>
+        <member name="T:AUTools.Unity.PauseObjScript">
+            <summary>Abstract parent script for Unity <see cref="T:UnityEngine.MonoBehaviour"/> scripts that can be paused.</summary>
+            <remarks>
+            <see cref="P:UnityEngine.Time.timeScale"/> is okay for pausing simple games, but won't work if you want anything to be going on while the game is paused, such as a pause menu animated by
+            physics. The <see cref="T:AUTools.Unity.PauseObjScript"/> hierarchy gives a fairly robust global solution for pausing exactly what you want to pause at any given time.
+            </remarks>
+        </member>
+        <member name="P:AUTools.Unity.PauseObjScript.Paused">
+            <summary>Gets or sets whether the object is paused.</summary>
+            <value><c>true</c> if paused, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.PauseObjScript.transform">
+            <summary>IF NULL, INITIALIZE WAS NOT CALLED Gets the object's cached <see cref="T:UnityEngine.Transform"/> component.</summary>
+            <remarks>
+            Hides the <see cref="T:UnityEngine.MonoBehaviour"/> <c>transform</c> property, which does a lookup each time it is accessed. For the curious, my testing showed a 30-50% reduction in
+            access time over the default behavior.
+            </remarks>
+            <value>The transform.</value>
+        </member>
+        <member name="M:AUTools.Unity.PauseObjScript.Initialize(System.Type[])">
+            <summary>Initializes the object. Must be called before <see cref="P:AUTools.Unity.PauseObjScript.transform"/> is used.</summary>
+            <remarks>
+            If the object needs no additional initialization parameters, this should be called in the object's <c>Awake</c> method. Otherwise, call it at the start of whatever other
+            method initializes it.
+            </remarks>
+            <param name="pauseComponentTypes">The types of any components that should be disabled/enabled on pause/unpause.</param>
+        </member>
+        <member name="M:AUTools.Unity.PauseObjScript.AddComponentsToPause(UnityEngine.Behaviour[])">
+            <summary>Adds the given components to be enabled/disabled on pause/unpause.</summary>
+            <param name="components">components to be paused.</param>
+        </member>
+        <member name="M:AUTools.Unity.PauseObjScript.AddComponentsToPause(System.Collections.Generic.IEnumerable{UnityEngine.Behaviour})">
+            <summary>Adds the given components to be enabled/disabled on pause/unpause.</summary>
+            <param name="components">enumerable collection of components to be paused.</param>
+        </member>
+        <member name="M:AUTools.Unity.PauseObjScript.Update">
+            <summary>Update is called once per frame.</summary>
+        </member>
+        <member name="M:AUTools.Unity.PauseObjScript.NotPausedUpdate">
+            <summary>Updates the object. Only called if the object is not paused.</summary>
+        </member>
+        <member name="P:AUTools.Unity.PauseObjScript.AllPaused">
+            <summary>Gets or sets the global pause object paused state. Individual objects might be paused or unpaused separately.</summary>
+            <value>The all-paused flag.</value>
+        </member>
+        <member name="T:AUTools.Unity.PausePhys2DObjScript">
+            <summary>Abstract parent script for Unity <see cref="T:UnityEngine.MonoBehaviour"/> scripts that can be paused that have 2D physics.</summary>
+        </member>
+        <member name="P:AUTools.Unity.PausePhys2DObjScript.Paused">
+            <summary>Gets or sets whether the object is paused.</summary>
+            <value><c>true</c> if paused, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.PausePhys2DObjScript.RBody">
+            <summary>Gets the rigidbody on the object.</summary>
+            <value>The <see cref="T:UnityEngine.Rigidbody2D"/> component.</value>
+        </member>
+        <member name="M:AUTools.Unity.PausePhys2DObjScript.Initialize(System.Type[])">
+            <summary>Initializes the object. Must be called before transform property is used.</summary>
+            <remarks>
+            If the object needs no additional initialization parameters, this should be called in the object's Awake method. Otherwise, call it at the start of whatever other method
+            initializes it.
+            </remarks>
+            <param name="pauseComponentTypes">The types of any components that should be disabled/enabled on pause/unpause.</param>
+        </member>
+        <member name="T:AUTools.Unity.PausePhysObjScript">
+            <summary>Abstract parent script for Unity <see cref="T:UnityEngine.MonoBehaviour"/> scripts that can be paused that have 3D physics.</summary>
+        </member>
+        <member name="P:AUTools.Unity.PausePhysObjScript.Paused">
+            <summary>Gets or sets whether the object is paused.</summary>
+            <value><c>true</c> if paused, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.PausePhysObjScript.RBody">
+            <summary>Gets the rigidbody on the object.</summary>
+            <value>The <see cref="T:UnityEngine.Rigidbody"/> component.</value>
+        </member>
+        <member name="M:AUTools.Unity.PausePhysObjScript.Initialize(System.Type[])">
+            <summary>Initializes the object. Must be called before transform property is used.</summary>
+            <remarks>
+            If the object needs no additional initialization parameters, this should be called in the object's Awake method. Otherwise, call it at the start of whatever other method
+            initializes it.
+            </remarks>
+            <param name="pauseComponentTypes">The types of any components that should be disabled/enabled on pause/unpause.</param>
+        </member>
+        <member name="T:AUTools.Unity.SafeEvent">
+            <summary><see cref="T:UnityEngine.Object"/>-safe event with no parameters.</summary>
+        </member>
+        <member name="M:AUTools.Unity.SafeEvent.Invoke">
+            <summary>Invokes the event.</summary>
+        </member>
+        <member name="T:AUTools.Unity.SafeEvent`1">
+            <summary><see cref="T:UnityEngine.Object"/>-safe event with one parameter.</summary>
+            <typeparam name="T">the parameter type for event handler delegates.</typeparam>
+        </member>
+        <member name="M:AUTools.Unity.SafeEvent`1.Invoke(`0)">
+            <summary>Invokes the event.</summary>
+            <param name="arg">the event argument.</param>
+        </member>
+        <member name="T:AUTools.Unity.SafeEvent`2">
+            <summary><see cref="T:UnityEngine.Object"/>-safe event with two parameters.</summary>
+            <typeparam name="T1">the first parameter type for event handler delegates.</typeparam>
+            <typeparam name="T2">the second parameter type for event handler delegates.</typeparam>
+        </member>
+        <member name="M:AUTools.Unity.SafeEvent`2.Invoke(`0,`1)">
+            <summary>Invokes the event.</summary>
+            <param name="arg0">the first event argument.</param>
+            <param name="arg1">the second event argument.</param>
+        </member>
+        <member name="T:AUTools.Unity.SafeEvent`3">
+            <summary><see cref="T:UnityEngine.Object"/>-safe event with two parameters.</summary>
+            <typeparam name="T1">the first parameter type for event handler delegates.</typeparam>
+            <typeparam name="T2">the second parameter type for event handler delegates.</typeparam>
+            <typeparam name="T3">the third parameter type for event handler delegates.</typeparam>
+        </member>
+        <member name="M:AUTools.Unity.SafeEvent`3.Invoke(`0,`1,`2)">
+            <summary>Invokes the event.</summary>
+            <param name="arg0">the first event argument.</param>
+            <param name="arg1">the second event argument.</param>
+            <param name="arg2">the third event argument.</param>
+        </member>
+        <member name="T:AUTools.Unity.SafeEvent`4">
+            <summary><see cref="T:UnityEngine.Object"/>-safe event with two parameters.</summary>
+            <typeparam name="T1">the first parameter type for event handler delegates.</typeparam>
+            <typeparam name="T2">the second parameter type for event handler delegates.</typeparam>
+            <typeparam name="T3">the third parameter type for event handler delegates.</typeparam>
+            <typeparam name="T4">the fourth parameter type for event handler delegates.</typeparam>
+        </member>
+        <member name="M:AUTools.Unity.SafeEvent`4.Invoke(`0,`1,`2,`3)">
+            <summary>Invokes the event.</summary>
+            <param name="arg0">the first event argument.</param>
+            <param name="arg1">the second event argument.</param>
+            <param name="arg2">the third event argument.</param>
+            <param name="arg3">the fourth event argument.</param>
+        </member>
+        <member name="T:AUTools.Unity.SafeEventBase`1">
+            <summary>Abstract base class for <see cref="T:UnityEngine.Object"/>-safe events.</summary>
+            <typeparam name="T">the event handler type.</typeparam>
+        </member>
+        <member name="P:AUTools.Unity.SafeEventBase`1.Handlers">
+            <summary>Gets the list of event handlers.</summary>
+            <value>The handlers.</value>
+        </member>
+        <member name="M:AUTools.Unity.SafeEventBase`1.ValidateHandler(System.Delegate,System.Int32)">
+            <summary>Validates the given event handler.</summary>
+            <param name="handler">the handler delegate.</param>
+            <param name="index">the index at which the handler is currently stored.</param>
+            <returns>true if the handler was valid, false otherwise.</returns>
+        </member>
+        <member name="M:AUTools.Unity.SafeEventBase`1.Add(`0)">
+            <summary>Adds the given handler into the event.</summary>
+            <exception cref="T:System.ArgumentNullException"><paramref name="handler"/> was null.</exception>
+            <param name="handler">the event handler.</param>
+        </member>
+        <member name="M:AUTools.Unity.SafeEventBase`1.Remove(`0)">
+            <summary>Removes the given handler from the event.</summary>
+            <param name="handler">the event handler.</param>
+            <returns><c>true</c> if it succeeds, <c>false</c> if it fails.</returns>
+        </member>
+        <member name="M:AUTools.Unity.SafeEventBase`1.GetEnumerator">
+            <summary>Returns an enumerator that iterates through the collection.</summary>
+            <returns>An enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Unity.SafeEventBase`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Returns an enumerator that iterates through a collection.</summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="T:AUTools.Unity.Timer">
+            <summary>A timer.</summary>
+        </member>
+        <member name="F:AUTools.Unity.Timer.finished">
+            <summary>The event for when the timer finishes.</summary>
+        </member>
+        <member name="M:AUTools.Unity.Timer.#ctor(System.Single)">
+            <summary>Constructor.</summary>
+            <param name="seconds">the seconds for the timer to run.</param>
+        </member>
+        <member name="M:AUTools.Unity.Timer.#ctor(System.Single,System.Action)">
+            <summary>Constructor.</summary>
+            <param name="seconds">the seconds for the timer to run.</param>
+            <param name="onFinish">the finish event handler.</param>
+        </member>
+        <member name="P:AUTools.Unity.Timer.IsRunning">
+            <summary>Gets or sets whether or not the timer is running.</summary>
+            <value><c>true</c> if this Timer is running, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.Timer.TotalSeconds">
+            <summary>Gets or sets the total seconds the timer will run for.</summary>
+            <value>The total number of seconds.</value>
+        </member>
+        <member name="P:AUTools.Unity.Timer.ElapsedSeconds">
+            <summary>Gets or sets the elapsed time.</summary>
+            <value>The elapsed seconds.</value>
+        </member>
+        <member name="P:AUTools.Unity.Timer.PercentDone">
+            <summary>Gets the percent that that the timer has elapsed.</summary>
+            <value>What percent done is the timer.</value>
+        </member>
+        <member name="M:AUTools.Unity.Timer.Update">
+            <summary>Updates the timer.</summary>
+        </member>
+        <member name="M:AUTools.Unity.Timer.Start">
+            <summary>Starts the timer.</summary>
+        </member>
+        <member name="M:AUTools.Unity.Timer.Stop">
+            <summary>Stops the timer.</summary>
+        </member>
+        <member name="M:AUTools.Unity.Timer.Finish">
+            <summary>Finishes the timer.</summary>
+        </member>
+        <member name="M:AUTools.Unity.Timer.Register(System.Action)">
+            <summary>Registers the provided event handler for the timer end event.</summary>
+            <param name="eventHandler">the event handler.</param>
+        </member>
+        <member name="T:AUTools.Unity.UI.AsyncValidatedInputField">
+            <summary>Script for an input field with customizable validation that supports asyncronous manual tests.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.AsyncValidatedInputField.UpdateValidity">
+            <summary>
+            Updates the input field's validity, running all tests. Call this to run the manual validity tests and when changes to another object might affect the field's validity.
+            </summary>
+            <returns>An asynchronous result that yields <c>true</c> if it succeeds, <c>false</c> if it fails.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UI.AsyncValidatedInputField.UpdateManualValidity">
+            <summary>Updates the field's validity, re-running only the manual tests.</summary>
+            <returns>An asynchronous result that yields <c>true</c> if it succeeds, <c>false</c> if it fails.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UI.AsyncValidatedInputField.AddManualValidityTest(System.Predicate{System.String})">
+            <summary>
+            Adds a method for manual testing of the field's validity. The test will only be run when <see cref="M:AUTools.Unity.UI.AsyncValidatedInputField.UpdateValidity"/> or <see cref="M:AUTools.Unity.UI.AsyncValidatedInputField.UpdateManualValidity"/> is called.
+            </summary>
+            <param name="test">The test method to add.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.AsyncValidatedInputField.RunManualValidity">
+            <summary>
+            Gets the field's validity, re-running only the manual tests
+            </summary>
+        </member>
+        <member name="T:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1">
+            <summary>Abstract base class for an input field with customizable validation.</summary>
+            <typeparam name="T">The manual test delegate type.</typeparam>
+            <remarks>This class cannot be directly inherited; inherit from <see cref="T:AUTools.Unity.UI.ValidatedInputField"/> or <see cref="T:AUTools.Unity.UI.AsyncValidatedInputField"/> instead.</remarks>
+        </member>
+        <member name="F:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.showOnValid">
+            <summary>Object that will be activated when the field becomes valid and deactived when it becomes invalid.</summary>
+        </member>
+        <member name="F:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.showOnInvalid">
+            <summary>Object that will be activated when the field becomes invalid and deactived when it becomes valid.</summary>
+        </member>
+        <member name="F:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.autoValidityTests">
+            <summary>Called whenever the input changes to test the input field's validity. The argument is the text in the field.</summary>
+        </member>
+        <member name="F:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.autoTestResults">
+            <summary>The collection of the results of the last set of automatic tests.</summary>
+        </member>
+        <member name="F:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.manualValidityTests">
+            <summary>Called manually to test the input field's validity. The argument is the text in the field.</summary>
+        </member>
+        <member name="F:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.manualTestResults">
+            <summary>The collection of the results of the last set of manual tests.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.#ctor">
+            <summary>Internal constructor to prevent direct extension outside of the library (users should extend one of the child classes).</summary>
+        </member>
+        <member name="P:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.IsValid">
+            <summary>
+            Gets or sets whether the field is currently valid. NOTE: <see cref="P:UnityEngine.UI.InputField.onValueChanged"/> events set in the Inspector will be processed before this is updated.
+            </summary>
+            <value><c>true</c> if the current text is valid, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.AutoTestResults">
+            <summary>Gets a collection containing the results of the last run of automatic tests.</summary>
+            <value>The automatic test results.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ManualTestResults">
+            <summary>Gets a collection containing the results of the last run of manual tests.</summary>
+            <value>The manual test results.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.LastManualValue">
+            <summary>Gets or sets the last field value used to run manual tests.</summary>
+            <value>The last manual value.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.LastManualResult">
+            <summary>Gets whether the field is valid based only on the last run set of manual tests if the text matches the text used in those tests.</summary>
+            <value><c>true</c> if last manual test was successful, <c>false</c> if not.</value>
+        </member>
+        <member name="E:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.OnValid">
+            <summary>Called when the input field becomes valid.</summary>
+        </member>
+        <member name="E:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.OnInvalid">
+            <summary>Called when the input field becomes invalid.</summary>
+        </member>
+        <member name="E:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.OnValidityChanged">
+            <summary>Called when the input field changes validity, after OnValid/OnInvalid.</summary>
+        </member>
+        <member name="E:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.OnHitCharacterLimit">
+            <summary>Called when the user attempts to add to the input field but has reached the character limit.</summary>
+        </member>
+        <member name="E:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.OnChangedPreVal">
+            <summary>Called during <see cref="P:UnityEngine.UI.InputField.onValueChanged"/> before <see cref="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.UpdateAutoValidity"/> is called.</summary>
+        </member>
+        <member name="E:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.OnChangedPostVal">
+            <summary>Called during <see cref="P:UnityEngine.UI.InputField.onValueChanged"/> after <see cref="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.UpdateAutoValidity"/> is called.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.AddValidityTest(System.Predicate{System.String})">
+            <summary>Adds a method for automatic testing of the field's validity. The test will run on Start and whenever the value of the field changes.</summary>
+            <param name="test">The test method to add.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.AddManualValidityTest(`0)">
+            <summary>Adds a method for manual testing of the field's validity. The test will only be run when UpdateValidity or UpdateManualValidity is called.</summary>
+            <param name="test">The test method to add.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.UpdateAutoValidity">
+            <summary>Updates the field's validity, re-running only the automatic tests.</summary>
+            <returns><c>true</c> if it succeeds, <c>false</c> if it fails.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.Awake">
+            <summary>Awake is called immediately on object creation.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.Start">
+            <summary>Start is called once on object creation.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.InGameAwake">
+            <summary>Called immediately on object creation but not in the editor (unlike regular Awake).</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.InGameStart">
+            <summary>Called once on object creation but not in the editor (unlike regular Start).</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.Append(System.Char)">
+            <summary><para>Append a character to the input field.</para></summary>
+            <param name="input">The character to append.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.OnValueChanged(System.String)">
+            <summary>Called when the input field's value changes.</summary>
+            <param name="value">The new value.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.RunAutoValidity">
+            <summary>Gets the field's validity, re-running only the automatic tests.</summary>
+            <returns><c>true</c> if it succeeds, <c>false</c> if it fails.</returns>
+        </member>
+        <member name="T:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection">
+            <summary>Represents the collection of results from a ValidationInputField's tests.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.#ctor(System.Collections.Generic.List{System.Boolean})">
+            <summary>Constructor.</summary>
+            <param name="list">The list.</param>
+        </member>
+        <member name="P:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.Count">
+            <summary>Gets the number of elements contained in the collection.</summary>
+            <value>The count.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.Item(System.Int32)">
+            <summary>Gets or sets the element at the specified index.</summary>
+            <param name="index">The zero-based index of the element to get or set.</param>
+            <value>The element at the specified index.</value>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.GetEnumerator">
+            <summary>Returns an enumerator that iterates through the collection.</summary>
+            <returns>An IEnumerator object that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Gets the enumerator.</summary>
+            <returns>The enumerator.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.System#Collections#Generic#ICollection{System#Boolean}#Add(System.Boolean)">
+            <summary>Adds item.</summary>
+            <param name="item">The object to insert into the <see cref="T:System.Collections.Generic.IList`1" />.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.System#Collections#Generic#ICollection{System#Boolean}#Clear">
+            <summary>Clears this ResultsCollection to its blank/initial state.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.System#Collections#Generic#ICollection{System#Boolean}#Contains(System.Boolean)">
+            <summary>Query if this ResultsCollection contains the given item.</summary>
+            <param name="item">The object to locate in the <see cref="T:System.Collections.Generic.IList`1" />.</param>
+            <returns><c>true</c> if the object is in this collection, <c>false</c> if not.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.System#Collections#Generic#ICollection{System#Boolean}#CopyTo(System.Boolean[],System.Int32)">
+            <summary>Copies to.</summary>
+            <param name="array">The array.</param>
+            <param name="arrayIndex">Zero-based index of the array.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.System#Collections#Generic#ICollection{System#Boolean}#Remove(System.Boolean)">
+            <summary>Removes the given item.</summary>
+            <param name="item">The object to locate in the <see cref="T:System.Collections.Generic.IList`1" />.</param>
+            <returns><c>true</c> if it succeeds, <c>false</c> if it fails.</returns>
+        </member>
+        <member name="P:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.System#Collections#Generic#ICollection{System#Boolean}#IsReadOnly">
+            <summary>Gets a value indicating whether this ResultsCollection is read only.</summary>
+            <value><c>true</c> if this ResultsCollection is read only, <c>false</c> if not.</value>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.System#Collections#Generic#IList{System#Boolean}#IndexOf(System.Boolean)">
+            <summary>Determines the index of a specific item in the <see cref="T:System.Collections.Generic.IList`1" />.</summary>
+            <param name="item">The object to locate in the <see cref="T:System.Collections.Generic.IList`1" />.</param>
+            <returns>The index of <paramref name="item" /> if found in the list; otherwise, -1.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.System#Collections#Generic#IList{System#Boolean}#Insert(System.Int32,System.Boolean)">
+            <summary>Inserts an item to the <see cref="T:System.Collections.Generic.IList`1" /> at the specified index.</summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">.</exception>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.IList`1" /> is read-only.</exception>
+            <param name="index">The zero-based index at which <paramref name="item" /> should be inserted.</param>
+            <param name="item">The object to insert into the <see cref="T:System.Collections.Generic.IList`1" />.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.Base.ValidatedInputFieldBase`1.ResultsCollection.System#Collections#Generic#IList{System#Boolean}#RemoveAt(System.Int32)">
+            <summary>Removes the <see cref="T:System.Collections.Generic.IList`1" /> item at the specified index.</summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">.</exception>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.IList`1" /> is read-only.</exception>
+            <param name="index">The zero-based index of the item to remove.</param>
+        </member>
+        <member name="T:AUTools.Unity.UI.MultiSelectDropdown">
+            <summary>Script for a dropdown that allows selecting multiple options.</summary>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.CaptionText">
+            <summary>Gets the Text component to hold the text of the currently selected options.</summary>
+            <value>The caption text.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.OptionText">
+            <summary>Gets the Text component to hold the text of the option template.</summary>
+            <value>The option text.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.OptionTemplate">
+            <summary>Gets the template to use for options in the dropdown.</summary>
+            <value>The option template.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.Dropdown">
+            <summary>Gets the dropdown list object that is enabled and disabled when SetShown is called.</summary>
+            <value>The dropdown.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.DropdownContent">
+            <summary>Gets the content area in the dropdown.</summary>
+            <value>The dropdown content.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.OnValueChanged">
+            <summary>Gets a <see cref="T:UnityEngine.Events.UnityEvent"/> that is invoked when when a user has clicked one of the options in the dropdown list.</summary>
+            <value>The on value changed.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.Options">
+            <summary>Gets the options currently in the dropdown.</summary>
+            <value>The options.</value>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.GetOptions">
+            <summary>Returns the options currently in the dropdown in an array.</summary>
+            <returns>An array of dropdown options. This will never be null.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.SetShown(System.Boolean)">
+            <summary>Sets whether the dropdown is shown.</summary>
+            <param name="show">whether the dropdown should be shown.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.AddOption(System.String)">
+            <summary>Adds an option to the dropdown.</summary>
+            <param name="value">the option text value.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.SetOptions(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>Sets what options are in the dropdown.</summary>
+            <param name="newOptions">the collection of option text values.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.ClearOptions">
+            <summary>Removes all options.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.RefreshDisplay">
+            <summary>Refreshes the caption display text.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.OnPointerClick(UnityEngine.EventSystems.PointerEventData)">
+            <summary>Handling for when the dropdown is 'clicked'.</summary>
+            <param name="eventData">Current event data.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.OnSubmit(UnityEngine.EventSystems.BaseEventData)">
+            <summary>What to do when the event system sends a submit Event.</summary>
+            <param name="eventData">Current event data.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.OnCancel(UnityEngine.EventSystems.BaseEventData)">
+            <summary>Called by a BaseInputModule when a Cancel event occurs.</summary>
+            <param name="eventData">Current event data.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.OnPointerDown(UnityEngine.EventSystems.PointerEventData)">
+            <summary><para>Evaluate current state and transition to pressed state.</para></summary>
+            <param name="eventData">The <see cref="T:UnityEngine.EventSystems.PointerEventData"/> usually sent by the EventSystem.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)">
+            <summary><para>Evaluate current state and transition to appropriate state.</para></summary>
+            <param name="eventData">The <see cref="T:UnityEngine.EventSystems.PointerEventData"/> usually sent by the EventSystem.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.OnPointerExit(UnityEngine.EventSystems.PointerEventData)">
+            <summary><para>Evaluate current state and transition to normal state.</para></summary>
+            <param name="eventData">The <see cref="T:UnityEngine.EventSystems.PointerEventData"/> usually sent by the EventSystem.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.Awake">
+            <summary>Awake is called immediately on object creation.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.InGameAwake">
+            <summary>Called immediately on object creation but not in the editor (unlike regular Awake).</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.RefreshDisplay(System.Collections.Generic.IEnumerable{AUTools.Unity.UI.MultiSelectDropdown.MsdOption})">
+            <summary>Refreshes the caption display text.</summary>
+            <param name="selected">The selected options. This cannot be null.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.OnOptionChanged(System.Int32)">
+            <summary>Called when one of the dropdown options is toggled. This method calls <see cref="P:AUTools.Unity.UI.MultiSelectDropdown.OnValueChanged"/>.</summary>
+            <param name="option">The index of the option that changed.</param>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.Update">
+            <summary>Update is called once per frame.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.AddEvents(UnityEngine.GameObject)">
+            <summary>Adds an <see cref="T:UnityEngine.EventSystems.EventTrigger"/> to the given <see cref="T:UnityEngine.GameObject"/> with handlers for PointerEnter and PointerExit.</summary>
+            <remarks>
+            OnPointerExit won't register on the parent once a child object has been selected when using touch input. The solution I settled on was to add EventTriggers to all child
+            Selectables that would update the pointerOver field as needed.
+            </remarks>
+            <param name="obj">the <see cref="T:UnityEngine.GameObject"/> to add the <see cref="T:UnityEngine.EventSystems.EventTrigger"/> component to.</param>
+        </member>
+        <member name="T:AUTools.Unity.UI.MultiSelectDropdown.MsdOption">
+            <summary>Controller component for multi-select dropdown options.</summary>
+        </member>
+        <member name="E:AUTools.Unity.UI.MultiSelectDropdown.MsdOption.ChangedEvent">
+            <summary>Fired when the value of the option's toggle changes.</summary>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.MsdOption.Data">
+            <summary>Gets a data object from the option.</summary>
+            <value>The data. This will never be null.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.MsdOption.Selected">
+            <summary>Gets or sets whether the toggle is on.</summary>
+            <value><c>true</c> if selected, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.MsdOption.Text">
+            <summary>Gets the text name of the toggle.</summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.MsdOption.Initialize(System.String)">
+            <summary>Initializes the option.</summary>
+            <param name="text">The text name of the toggle.</param>
+        </member>
+        <member name="T:AUTools.Unity.UI.MultiSelectDropdown.MsdOptionData">
+            <summary>Class that stores the data from a multi-select dropdown option.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.MultiSelectDropdown.MsdOptionData.#ctor(System.Boolean,System.String)">
+            <summary>Constructor.</summary>
+            <param name="selected">whether the option is selected.</param>
+            <param name="text">the option's text.</param>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.MsdOptionData.Selected">
+            <summary>Gets whether the option is selected.</summary>
+            <value><c>true</c> if selected, <c>false</c> if not.</value>
+        </member>
+        <member name="P:AUTools.Unity.UI.MultiSelectDropdown.MsdOptionData.Text">
+            <summary>Gets the option's text.</summary>
+            <value>The text.</value>
+        </member>
+        <member name="T:AUTools.Unity.UI.ValidatedInputField">
+            <summary>Script for an input field with customizable validation.</summary>
+        </member>
+        <member name="M:AUTools.Unity.UI.ValidatedInputField.UpdateValidity">
+            <summary>
+            Updates the input field's validity, running all tests. Call this to run the manual validity tests and when changes to another object might affect the field's validity.
+            </summary>
+            <returns><c>true</c> if it succeeds, <c>false</c> if it fails.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UI.ValidatedInputField.UpdateManualValidity">
+            <summary>Updates the field's validity, re-running only the manual tests.</summary>
+            <returns><c>true</c> if it succeeds, <c>false</c> if it fails.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UI.ValidatedInputField.RunManualValidity">
+            <summary>Gets the field's validity, re-running only the manual tests.</summary>
+            <returns><c>true</c> if it succeeds, <c>false</c> if it fails.</returns>
+        </member>
+        <member name="T:AUTools.Unity.UnityUtils">
+            <summary>Static class for Unity utility functions.</summary>
+        </member>
+        <member name="P:AUTools.Unity.UnityUtils.MousePosition">
+            <summary>Gets the mouse position in world space in 2D.</summary>
+            <value>The mouse position.</value>
+        </member>
+        <member name="M:AUTools.Unity.UnityUtils.DrawSpike(UnityEngine.Vector3,UnityEngine.Color,System.Single,System.Single)">
+            <summary>Draws the location in the Unity editor.</summary>
+            <param name="location">The location to draw.</param>
+            <param name="color">The line color.</param>
+            <param name="lineDuration">Duration of the lines.</param>
+            <param name="lineLength">The length of the line in space units.</param>
+        </member>
+        <member name="M:AUTools.Unity.UnityUtils.AddComponent``1(UnityEngine.GameObject,``0,System.Boolean)">
+            <summary>Adds a copy of the given component to the <see cref="T:UnityEngine.GameObject"/>.</summary>
+            <remarks>
+            Be careful with this method; it uses reflection and could have unintended side effects. Derived from
+            http://answers.unity3d.com/questions/530178/how-to-get-a-component-from-an-object-and-add-it-t.html.
+            </remarks>
+            <typeparam name="T">the component type.</typeparam>
+            <param name="go">the <see cref="T:UnityEngine.GameObject"/> to add the component.</param>
+            <param name="toCopy">the component to copy.</param>
+            <param name="copyPrivate">Whether to copy private data members. This might be safer or less safe, depending on the type of component.</param>
+            <returns>the newly-added component.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UnityUtils.GetRandom``1(System.Collections.Generic.IList{``0})">
+            <summary>Gets a random item in the list.</summary>
+            <remarks>If <paramref name="source"/> could be empty, use <see cref="M:AUTools.Unity.UnityUtils.GetRandomOrDefault``1(System.Collections.Generic.IList{``0})"/> and check for null instead.</remarks>
+            <exception cref="T:System.ArgumentNullException"><paramref name="source"/> is null.</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="source"/> is empty.</exception>
+            <typeparam name="T">the list type.</typeparam>
+            <param name="source">the list to get a random item from.</param>
+            <returns>a random item.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UnityUtils.GetRandom``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>Gets a random item in the enumerable.</summary>
+            <remarks>If <paramref name="source"/> could be empty, use <see cref="M:AUTools.Unity.UnityUtils.GetRandomOrDefault``1(System.Collections.Generic.IEnumerable{``0})"/> and check for null instead.</remarks>
+            <exception cref="T:System.ArgumentNullException"><paramref name="source"/> is null.</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="source"/> is empty.</exception>
+            <typeparam name="T">the enumerable type.</typeparam>
+            <param name="source">the enumerable to get a random item from.</param>
+            <returns>a random item.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UnityUtils.GetRandomOrDefault``1(System.Collections.Generic.IList{``0})">
+            <summary>Gets a random item in the list, or the default value if the list is empty.</summary>
+            <typeparam name="T">the list type.</typeparam>
+            <param name="source">the list to get a random item from.</param>
+            <returns>a random item.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UnityUtils.GetRandomOrDefault``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>Gets a random item in the enumerable, or the default value if the enumerable is empty.</summary>
+            <typeparam name="T">the enumerable type.</typeparam>
+            <param name="source">the enumerable to get a random item from.</param>
+            <returns>a random item.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UnityUtils.Average(System.Collections.Generic.IEnumerable{UnityEngine.Vector3})">
+            <summary>Averages the collection of <see cref="T:UnityEngine.Vector3"/> objects.</summary>
+            <param name="enumerable">The enumerable to act on. This cannot be null.</param>
+            <returns>The average value.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UnityUtils.RandomInPercent(System.Single,System.Single)">
+            <summary>
+            Returns a randon number between (<paramref name="baseVal"/> - (<paramref name="percent"/> * <paramref name="baseVal"/>)) and (<paramref name="baseVal"/> +
+            (<paramref name="percent"/> * <paramref name="baseVal"/>))
+            </summary>
+            <param name="baseVal">the base value.</param>
+            <param name="percent">the variation percent.</param>
+            <returns>a random number.</returns>
+        </member>
+        <member name="M:AUTools.Unity.UnityUtils.RandomInInterval(System.Single,System.Single)">
+            <summary>Returns a randon number between (<paramref name="baseVal"/> - <paramref name="interval"/>) and (<paramref name="baseVal"/> + <paramref name="interval"/>)</summary>
+            <param name="baseVal">the base value.</param>
+            <param name="interval">the interval.</param>
+            <returns>a random number.</returns>
+        </member>
+    </members>
+</doc>
