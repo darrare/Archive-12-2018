@@ -1,0 +1,10 @@
+WASD or arrow keys to move around. S and the down key doubles the effect of gravity while held (so you can fall faster)
+
+Left Shift = slow down time.
+
+Left Click = Shoot at mouse location.
+
+Space = Jump, but if in air it activates your boosts.
+You have 3 boosts per air time, but you get an additional one (max of 3) if you take damage in the air)
+
+2 bosses, after the 2nd boss the demo is over.
