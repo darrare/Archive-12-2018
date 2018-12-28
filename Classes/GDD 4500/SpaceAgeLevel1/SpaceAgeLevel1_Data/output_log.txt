@@ -1,0 +1,323 @@
+Initialize engine version: 5.2.0f3 (e7947df39b5c)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon R9 200 Series (ID=0x6810)
+    Vendor:   ATI
+    VRAM:     2026 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\Programming\Unity\Projects\School Projects\4500\SpaceAgeLevel1\SpaceAgeLevel1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\School Projects\4500\SpaceAgeLevel1\SpaceAgeLevel1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\School Projects\4500\SpaceAgeLevel1\SpaceAgeLevel1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\School Projects\4500\SpaceAgeLevel1\SpaceAgeLevel1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\School Projects\4500\SpaceAgeLevel1\SpaceAgeLevel1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\School Projects\4500\SpaceAgeLevel1\SpaceAgeLevel1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\School Projects\4500\SpaceAgeLevel1\SpaceAgeLevel1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\Programming\Unity\Projects\School Projects\4500\SpaceAgeLevel1\SpaceAgeLevel1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\Programming\Unity\Projects\School Projects\4500\SpaceAgeLevel1\SpaceAgeLevel1_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.045 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: F:\Programming\Unity\Projects\School Projects\4500\SpaceAgeLevel1\SpaceAgeLevel1_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 7ab4 -> priority: 1 
+Client Connected: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+received OnServerReadyToBeginMessage: asldkjnaklsjdna
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ClientManager.SendReadyToBeginMessage (Int32 myId) [0x00000] in <filename unknown>:0 
+  at ClientManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Client Connected: 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Empty player list given to NetworkServer.Destroy(), nothing to do.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+

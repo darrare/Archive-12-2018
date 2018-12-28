@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="30" tilewidth="64" tileheight="64" nextobjectid="1">
+ <tileset firstgid="1" name="spaceShip" tilewidth="64" tileheight="64" tilecount="225">
+  <image source="../FromPC/RandomShitIFind/spaceShip.png" width="960" height="960"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="50" height="30">
+  <data encoding="base64" compression="zlib">
+   eJy9WEluBDEI7EO2B2R5QPKBSc6T5AFZ/v+bMFKQEKJY3NCH0gzTNm0KKHt82rbtahGnf1THV+dlfV8+PwifhDPhnfBMeBG2fq7juCbcEG4Jd4aN4ojmZW3290P4JXwRvgmvhDdh6+c6jnvCA+GR8GTYKI5oXtbW+UX8c37492xdWfmT86S/vXUl/SL+OT/8u7Uua51W/uRz6a8jBvYb9YXHr+dvqj9QXUR9IfnNgP1N9UdVbzp569BdK8+duuHx1gkrz526gXg7Is9aN6L+rdQF8zaZZ7meig5ZeoR4m8qzpbuX72ifzvKNeFvJ8yq8/kc8cxwR397+MREH6n/EM6/T41v77a6jSj4033JcxLeXz859KMObPv/ocdP7debcbPGu49f8s65N79ca1jnbeh/zruPX/LOuVXjq6N+M7kXx7+2/KT1djb+zTqrw+nBFv6bPxXv0qqJf0+fiPXplxYF0CfWN1jUE/T+f7Wh+Rq+sOJAuob7J1K8cx37YjvahqfO4jiOjJ5LXzL2YVR/I/5F6InnN3ItZ9YHef/T5R9+7ZO5honVO6E8UR6Ve5TzvvVN7VrYPO/v1D7k2mvA=
+  </data>
+ </layer>
+</map>
