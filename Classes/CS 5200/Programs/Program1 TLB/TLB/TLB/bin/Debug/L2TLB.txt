@@ -1,0 +1,2 @@
+Set       Valid     Block     Tag       LRU       data      Valid     Block     Tag       LRU       data      Valid     Block     Tag       LRU       data      Valid     Block     Tag       LRU       data      
+77        True      308       0x0057    8         0x0090    True      309       0x0077    9         0x00A0    True      310       0x0097    10        0x00B0    True      311       0x0037    7         0x0080    

@@ -1,0 +1,7 @@
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ06\GeneratingTool\TuringMachineGeneratingTool\TuringMachineGeneratingTool\bin\Debug\TuringMachineGeneratingTool.exe.config
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ06\GeneratingTool\TuringMachineGeneratingTool\TuringMachineGeneratingTool\bin\Debug\TuringMachineGeneratingTool.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ06\GeneratingTool\TuringMachineGeneratingTool\TuringMachineGeneratingTool\bin\Debug\TuringMachineGeneratingTool.pdb
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ06\GeneratingTool\TuringMachineGeneratingTool\TuringMachineGeneratingTool\obj\Debug\TuringMachineGeneratingTool.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ06\GeneratingTool\TuringMachineGeneratingTool\TuringMachineGeneratingTool\obj\Debug\TuringMachineGeneratingTool.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ06\GeneratingTool\TuringMachineGeneratingTool\TuringMachineGeneratingTool\obj\Debug\TuringMachineGeneratingTool.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ06\GeneratingTool\TuringMachineGeneratingTool\TuringMachineGeneratingTool\obj\Debug\TuringMachineGeneratingTool.pdb

@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F068E6E8-F65A-44D4-A369-094FE7912078}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SmashRandomPicker.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>SmashRandomPicker.iOS</AssemblyName>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>1.1.5.180</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="3.3.0.967583" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\SmashRandomPicker\SmashRandomPicker.csproj">
+      <Project>{8D0F7AB0-0396-4059-81BE-592E9BC6CE58}</Project>
+      <Name>SmashRandomPicker</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bayonetta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bowser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BowserJr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CaptainFalcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Chrom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Corrin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Daisy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DarkPit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DarkSamus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DiddyKong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DonkeyKong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DrMario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DuckHunt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Falco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ganondorf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Greninja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\IceClimbers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Incineroar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Inkling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Isabelle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Jigglypuff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\KingDedede.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\KingKRool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Kirby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LittleMac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Lucario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Lucas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Lucina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Luigi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Mario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Marth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MegaMan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MetaKnight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Mewtwo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MrGameAndWatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ness.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Olimar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PacMan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Palutena.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Peach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Pichu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Pikachu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Pit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PokemonTrainer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Richter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ridley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Rob.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Robin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RosalinaAndLuma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Roy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ryu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Samus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Sheik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Shulk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Simon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Snake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Sonic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ToonLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Villager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Wario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\WiiFitTrainer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Wolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Yoshi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\YoungLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Zelda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZeroSuitSamus.png" />
+  </ItemGroup>
+</Project>

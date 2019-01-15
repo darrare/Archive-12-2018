@@ -1,0 +1,9 @@
+uCycle =  16897
+nMicroTLBHit =  960
+nMicroTLBMiss =  64
+nL2TLBHit =  64
+nL2TLBMiss =  0
+nL1CacheHit =  15360
+nL1CacheMiss =  1024
+nL2CacheHit =  48
+nL2CacheMiss =  976

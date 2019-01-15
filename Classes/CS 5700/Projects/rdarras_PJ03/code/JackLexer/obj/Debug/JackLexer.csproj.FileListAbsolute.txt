@@ -1,0 +1,14 @@
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\part3\JackLexer\JackLexer\bin\Debug\JackLexer.exe.config
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\part3\JackLexer\JackLexer\bin\Debug\JackLexer.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\part3\JackLexer\JackLexer\bin\Debug\JackLexer.pdb
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\part3\JackLexer\JackLexer\obj\Debug\JackLexer.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\part3\JackLexer\JackLexer\obj\Debug\JackLexer.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\part3\JackLexer\JackLexer\obj\Debug\JackLexer.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\part3\JackLexer\JackLexer\obj\Debug\JackLexer.pdb
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ03\code\JackLexer\bin\Debug\JackLexer.exe.config
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ03\code\JackLexer\bin\Debug\JackLexer.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ03\code\JackLexer\bin\Debug\JackLexer.pdb
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ03\code\JackLexer\obj\Debug\JackLexer.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ03\code\JackLexer\obj\Debug\JackLexer.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ03\code\JackLexer\obj\Debug\JackLexer.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\rdarras_PJ03\code\JackLexer\obj\Debug\JackLexer.pdb

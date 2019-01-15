@@ -1,0 +1,7 @@
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FiniteAutomatonSimulator\FiniteAutomatonSimulator\obj\Debug\FiniteAutomatonSimulator.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FiniteAutomatonSimulator\FiniteAutomatonSimulator\obj\Debug\FiniteAutomatonSimulator.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FiniteAutomatonSimulator\FiniteAutomatonSimulator\bin\Debug\FiniteAutomatonSimulator.exe.config
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FiniteAutomatonSimulator\FiniteAutomatonSimulator\bin\Debug\FiniteAutomatonSimulator.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FiniteAutomatonSimulator\FiniteAutomatonSimulator\bin\Debug\FiniteAutomatonSimulator.pdb
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FiniteAutomatonSimulator\FiniteAutomatonSimulator\obj\Debug\FiniteAutomatonSimulator.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FiniteAutomatonSimulator\FiniteAutomatonSimulator\obj\Debug\FiniteAutomatonSimulator.pdb

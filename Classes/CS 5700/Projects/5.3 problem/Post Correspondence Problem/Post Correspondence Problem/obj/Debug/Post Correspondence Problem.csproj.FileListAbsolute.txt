@@ -1,0 +1,7 @@
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\5.3 problem\Post Correspondence Problem\Post Correspondence Problem\bin\Debug\Post Correspondence Problem.exe.config
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\5.3 problem\Post Correspondence Problem\Post Correspondence Problem\bin\Debug\Post Correspondence Problem.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\5.3 problem\Post Correspondence Problem\Post Correspondence Problem\bin\Debug\Post Correspondence Problem.pdb
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\5.3 problem\Post Correspondence Problem\Post Correspondence Problem\obj\Debug\Post Correspondence Problem.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\5.3 problem\Post Correspondence Problem\Post Correspondence Problem\obj\Debug\Post Correspondence Problem.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\5.3 problem\Post Correspondence Problem\Post Correspondence Problem\obj\Debug\Post Correspondence Problem.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Projects\5.3 problem\Post Correspondence Problem\Post Correspondence Problem\obj\Debug\Post Correspondence Problem.pdb

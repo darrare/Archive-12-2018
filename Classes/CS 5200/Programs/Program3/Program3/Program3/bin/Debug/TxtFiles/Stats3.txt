@@ -1,0 +1,9 @@
+uCycle =  517
+nMicroTLBHit =  3
+nMicroTLBMiss =  1
+nL2TLBHit =  1
+nL2TLBMiss =  0
+nL1CacheHit =  0
+nL1CacheMiss =  4
+nL2CacheHit =  0
+nL2CacheMiss =  4

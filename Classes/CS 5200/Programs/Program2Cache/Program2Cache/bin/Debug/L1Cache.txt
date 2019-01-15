@@ -1,0 +1,12 @@
+Cache size (bytes): 32768
+Block size (bytes): 64
+Associativity: 4-way
+Number of blocks: 512
+Number of block index bits: 6
+Number of set index bits: 7
+Number of sets: 128
+Number of tag bits: 19
+Set mask: 0x007f
+
+Set       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       
+60        240       0x55E0F   4         241       0x55E77   1         242       0x55E7F   2         243       0x55E07   3         

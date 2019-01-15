@@ -1,0 +1,7 @@
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FAbuilder\FAbuilder\bin\Debug\FAbuilder.exe.config
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FAbuilder\FAbuilder\bin\Debug\FAbuilder.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FAbuilder\FAbuilder\bin\Debug\FAbuilder.pdb
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FAbuilder\FAbuilder\obj\Debug\FAbuilder.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FAbuilder\FAbuilder\obj\Debug\FAbuilder.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FAbuilder\FAbuilder\obj\Debug\FAbuilder.exe
+C:\Users\Ryan\Desktop\Spring2018\5700\Project\FAbuilder\FAbuilder\obj\Debug\FAbuilder.pdb

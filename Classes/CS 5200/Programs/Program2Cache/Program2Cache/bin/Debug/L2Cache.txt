@@ -1,0 +1,12 @@
+Cache size (bytes): 1048576
+Block size (bytes): 64
+Associativity: 16-way
+Number of blocks: 16384
+Number of block index bits: 6
+Number of set index bits: 10
+Number of sets: 1024
+Number of tag bits: 16
+Set mask: 0x03ff
+
+Set       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       Block     Tag       LRU       
+956       15296     0xABDD    21        15297     0xABCE    6         15298     0xABCF    7         15299     0xABD0    8         15300     0xABD1    9         15301     0xABD2    10        15302     0xABD3    11        15303     0xABD4    12        15304     0xABD5    13        15305     0xABD6    14        15306     0xABD7    15        15307     0xABD8    16        15308     0xABD9    17        15309     0xABDA    18        15310     0xABDB    19        15311     0xABDC    20        

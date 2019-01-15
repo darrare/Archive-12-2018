@@ -1,0 +1,7 @@
+C:\Users\Ryan\Desktop\Spring2018\5200\Programs\Program1 TLB\TLB\TLB\bin\Debug\TLB.exe.config
+C:\Users\Ryan\Desktop\Spring2018\5200\Programs\Program1 TLB\TLB\TLB\bin\Debug\TLB.exe
+C:\Users\Ryan\Desktop\Spring2018\5200\Programs\Program1 TLB\TLB\TLB\bin\Debug\TLB.pdb
+C:\Users\Ryan\Desktop\Spring2018\5200\Programs\Program1 TLB\TLB\TLB\obj\Debug\TLB.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\Spring2018\5200\Programs\Program1 TLB\TLB\TLB\obj\Debug\TLB.exe
+C:\Users\Ryan\Desktop\Spring2018\5200\Programs\Program1 TLB\TLB\TLB\obj\Debug\TLB.pdb
+C:\Users\Ryan\Desktop\Spring2018\5200\Programs\Program1 TLB\TLB\TLB\obj\Debug\TLB.csproj.CoreCompileInputs.cache
