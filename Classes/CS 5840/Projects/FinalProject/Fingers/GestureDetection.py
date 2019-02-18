@@ -89,7 +89,7 @@ def GetCurrentFingers():
 
 from itertools import groupby as g
 def GetMostCommonElement(L):
-  return max(g(sorted(L)), key=lambda(x, v):(len(list(v)),-L.index(x)))[0]
+  return max(g(sorted(L)), key=lambda x, v:(len(list(v)),-L.index(x)))[0]
 
 def GetAverageFingerPosition(positions, N):
     if N == 0:

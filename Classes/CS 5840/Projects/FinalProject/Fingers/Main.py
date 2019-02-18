@@ -68,9 +68,9 @@ cv2.createTrackbar('ORI', 'Settings', ORI, 100, Nothing)
 cv2.createTrackbar('BLUR', 'Settings', BLUR, 100, Nothing)
 _, bgModel = camera.read()
 bgModel = cv2.flip(bgModel, 1)  # flip the frame horizontally
-bgGray = cv2.cvtColor(bgModel, cv2.COLOR_BGR2GRAY)
+#bgGray = cv2.cvtColor(bgModel, cv2.COLOR_BGR2GRAY)
 
-while camera.isOpened():
+while 1:
     BLUR = cv2.getTrackbarPos('BLUR', 'Settings')
     if BLUR % 2 == 0:
         BLUR = BLUR + 1
@@ -79,7 +79,7 @@ while camera.isOpened():
     ret, frame = camera.read()
     frame = cv2.flip(frame, 1)  # flip the frame horizontally
     
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    #gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     img = cv2.subtract(frame, bgModel)
 
     ret, img = cv2.threshold(img,15, 255, cv2.THRESH_BINARY)
@@ -140,13 +140,13 @@ while camera.isOpened():
     if k == 32:
         _, bgModel = camera.read()
         bgModel = cv2.flip(bgModel, 1)  # flip the frame horizontally
-        bgGray = cv2.cvtColor(bgModel, cv2.COLOR_BGR2GRAY)
+        #bgGray = cv2.cvtColor(bgModel, cv2.COLOR_BGR2GRAY)
     if k == ord('a'):
         rangeVal -= 1
-        print rangeVal
+        print(rangeVal)
     if k == ord('d'):
         rangeVal += 1
-        print rangeVal
+        print(rangeVal)
 
 
 

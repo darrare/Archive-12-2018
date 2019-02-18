@@ -56,15 +56,8 @@ public class AudioManager
     {
         SoundEffects = new Dictionary<SoundEffect, AudioClip>();
 
-        //Create a temporary dictionary that loads all of the Audio files from a specific location.
         //Key = name of file, Value = file itself.
-        Dictionary<string, AudioClip> clips = Resources.LoadAll<AudioClip>(Constants.AUDIO_FILE_LOCATION).ToDictionary(t => t.name);
-
-        //Iterates through the loaded sound files and adds them to the Enum to AudioClip dictionary.
-        foreach (KeyValuePair<string, AudioClip> c in clips)
-        {
-            SoundEffects.Add((SoundEffect)Enum.Parse(typeof(SoundEffect), c.Key, true), c.Value);
-        }
+        SoundEffects = Resources.LoadAll<AudioClip>(Constants.AUDIO_FILE_LOCATION).ToDictionary(t => (SoundEffect)Enum.Parse(typeof(SoundEffect), t.name, true));
 
         //Creates a single sound effect source. Can play every sound in the game through this unless you want to have different effects
         //such as different pitch/volume for different sources.
