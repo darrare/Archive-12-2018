@@ -25,9 +25,6 @@ namespace Swagger
         const int A_KEY = 0x41;
         const int S_KEY = 0x53;
         const int D_KEY = 0x44;
-        const int J_KEY = 0x4A; //for brawlhalla
-        const int K_KEY = 0x4B; //for brawlhalla
-        const int C_KEY = 0x43; //for brawlhalla
 
         //for displaying time
         public static DateTime startTime;
@@ -105,18 +102,6 @@ namespace Swagger
             durationTimer.Elapsed += ReleaseKey;
             durationTimer.Enabled = true;
             durationTimer.AutoReset = false;
-        }
-
-        //Below will handle the transition between menu and game.
-
-        static void PressCRepeating(Object source, ElapsedEventArgs e)
-        {
-            form.PressKey(C_KEY);
-
-            menuTimerSmall = new Timer(100);//random.Next(1 * scalar, 3 * scalar));
-            menuTimerSmall.Elapsed += PressCRepeating;
-            menuTimerSmall.Enabled = true;
-            menuTimerSmall.AutoReset = false;
         }
 
         static void StartMenuOperations(Object source, ElapsedEventArgs e)

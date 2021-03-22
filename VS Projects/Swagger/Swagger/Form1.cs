@@ -67,10 +67,8 @@ namespace Swagger
 
             //Utilities.Start();
             //CurrentStatus.Text = "Anti-Afk active";
-            //return;
-            //above is temp for pokemon
 
-            wow = Process.GetProcessesByName("Brawlhalla").FirstOrDefault(); //Wow-64
+            wow = Process.GetProcessesByName("Notepad").FirstOrDefault(); //Wow-64
             if (wow != null)
             {
                 IntPtr h = wow.MainWindowHandle;
